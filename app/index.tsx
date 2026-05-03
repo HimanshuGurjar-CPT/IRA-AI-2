@@ -9,8 +9,8 @@ export default function App() {
         Welcome to Nativewind!
       </Text>
       <Link
+        className="p-4 bg-primary text-black rounded-xl mt-4 cursor-pointer"
         href="/login"
-        className="p-4 bg-primary text-white rounded-xl mt-4 cursor-pointer"
       >
         Login
       </Link>
