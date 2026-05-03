@@ -1,21 +1,20 @@
-import { Text, View } from "react-native";
+import "@/global.css";
+import { Link } from "expo-router";
+import { Text, View, Pressable } from "react-native";
 
-export default function Index() {
+export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#000",
-      }}
-    >
-      <Text style={{ color: "#fff", fontSize: 48, fontWeight: "bold" }}>
-        IRIS X
+    <View className="flex-1 items-center justify-center bg-white">
+      <Text className="text-xl font-bold text-blue-500">
+        Welcome to Nativewind!
       </Text>
-      <Text style={{ color: "#fff", fontSize: 18 }}>
-        Empowering tomorrow with the power of AI
-      </Text>
+      
+      {/* Use asChild and style the Pressable instead */}
+      <Link href="/login" asChild>
+        <Pressable className="p-4 bg-primary rounded-xl mt-4">
+          <Text className="text-black">Login</Text>
+        </Pressable>
+      </Link>
     </View>
   );
 }
