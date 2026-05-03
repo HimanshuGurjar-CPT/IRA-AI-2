@@ -1,4 +1,5 @@
 import "@/global.css";
+import { Link } from "expo-router";
 import { Text, View } from "react-native";
 
 export default function App() {
@@ -7,6 +8,12 @@ export default function App() {
       <Text className="text-xl font-bold text-blue-500">
         Welcome to Nativewind!
       </Text>
+      <Link
+        href="/login"
+        className="p-4 bg-primary text-white rounded-xl mt-4 cursor-pointer"
+      >
+        Login
+      </Link>
     </View>
   );
 }
