@@ -7,9 +7,15 @@ export default function Index() {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: "#000",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Text style={{ color: "#fff", fontSize: 48, fontWeight: "bold" }}>
+        IRIS X
+      </Text>
+      <Text style={{ color: "#fff", fontSize: 18 }}>
+        Empowering tomorrow with the power of AI
+      </Text>
     </View>
   );
 }
