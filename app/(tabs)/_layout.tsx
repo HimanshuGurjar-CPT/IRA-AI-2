@@ -10,6 +10,8 @@ const TabLayout = () => (
           key={tab.name}
           name={tab.name}
           options={{
+            headerShown: false,
+            tabBarActiveTintColor: "#2A800F",
             title: tab.title,
             tabBarIcon: ({ color, size, focused }) => (
               <Image
@@ -17,7 +19,7 @@ const TabLayout = () => (
                 style={{
                   width: size,
                   height: size,
-                  tintColor: focused ? "#000000" : "#000000",
+                  tintColor: focused ? "#2A800F" : color,
                 }}
               />
             ),
