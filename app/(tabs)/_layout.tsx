@@ -3,7 +3,7 @@ import { Image } from "expo-image";
 import { Tabs } from "expo-router";
 
 const TabLayout = () => (
-  <Tabs>
+  <Tabs screenOptions={{ headerShown: false }}>
     {tabs.map((tab) => {
       return (
         <Tabs.Screen
@@ -11,7 +11,7 @@ const TabLayout = () => (
           name={tab.name}
           options={{
             headerShown: false,
-            tabBarActiveTintColor: "#2A800F",
+            tabBarActiveTintColor: "#4AB058",
             title: tab.title,
             tabBarIcon: ({ color, size, focused }) => (
               <Image
@@ -19,7 +19,7 @@ const TabLayout = () => (
                 style={{
                   width: size,
                   height: size,
-                  tintColor: focused ? "#2A800F" : color,
+                  tintColor: focused ? "#4AB058" : color,
                 }}
               />
             ),
