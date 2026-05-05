@@ -4,7 +4,10 @@ declare global {
     title: string;
     icon: ImageSourcePropType;
   }
+  interface TabIconProps {
+    focused: boolean;
+    icon: ImageSourcePropType;
+  }
 }
 
-export { };
-
+export {};
