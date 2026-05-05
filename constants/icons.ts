@@ -1,6 +1,6 @@
 import apps from "../assets/icons/apps.png";
 import home from "../assets/icons/home.png";
-import logo from "../assets/icons/logo.png";
+import logo from "../assets/icons/logo_icon.png";
 import notes from "../assets/icons/notes.png";
 import profile from "../assets/icons/profile.png";
 

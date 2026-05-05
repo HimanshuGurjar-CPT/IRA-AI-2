@@ -6,7 +6,11 @@ import { Text, View } from "react-native";
 const IrisHeader = () => {
   return (
     <View className="flex flex-row items-center gap-2">
-      <Image source={icons.logo} className="w-20 h-20" />
+      <Image
+        source={icons.logo}
+        style={{ width: 50, height: 50 }}
+        contentFit="contain"
+      />
       <Text className="text-white text-4xl font-bold text-center">IRIS</Text>
     </View>
   );
