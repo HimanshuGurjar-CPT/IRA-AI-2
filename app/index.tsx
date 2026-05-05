@@ -19,7 +19,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function NeuralInterface() {
   return (
-    <SafeAreaView className="flex-1 bg-darkBg">
+    <SafeAreaView className="flex-1 bg-darkBg justify-center items-center">
       <StatusBar barStyle="light-content" />
 
       <ScrollView
