@@ -38,6 +38,23 @@
             "backgroundColor": "#000000"
           }
         }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Antonio-Bold.ttf",
+            "./assets/fonts/Antonio-Medium.ttf",
+            "./assets/fonts/Antonio-Regular.ttf",
+            "./assets/fonts/Antonio-SemiBold.ttf",
+            "./assets/fonts/Outfit-ExtraLight.ttf",
+            "./assets/fonts/Outfit-Light.ttf",
+            "./assets/fonts/Outfit-Medium.ttf",
+            "./assets/fonts/Outfit-Regular.ttf",
+            "./assets/fonts/Outfit-SemiBold.ttf",
+            "./assets/fonts/Outfit-Thin.ttf"
+          ]
+        }
       ]
     ],
     "experiments": {
