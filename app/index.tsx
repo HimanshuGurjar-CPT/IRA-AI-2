@@ -9,7 +9,7 @@ export default function App() {
         Welcome to IRIS AI
       </Text>
 
-      <Link href="/login" asChild>
+      <Link href="/(auth)/login" asChild>
         <Pressable className="p-4 bg-red-500 rounded mt-4">
           <Text className="text-black">Login</Text>
         </Pressable>

@@ -3,8 +3,8 @@ import { Text, View } from "react-native";
 
 const login = () => {
   return (
-    <View>
-      <Text>login</Text>
+    <View className="flex-1 justify-center items-center">
+      <Text className="text-3xl font-bold text-blue-500">Login Page</Text>
     </View>
   );
 };
