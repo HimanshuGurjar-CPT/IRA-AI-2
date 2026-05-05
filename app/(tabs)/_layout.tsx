@@ -1,8 +1,10 @@
 import { tabs } from "@/constants/data";
+import { components } from "@/constants/theme";
 import { clsx } from "clsx";
 import { Image } from "expo-image";
 import { Tabs } from "expo-router";
 import { View } from "react-native-reanimated/lib/typescript/Animated";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const tabBar = components.tabBar;
 
@@ -16,7 +18,9 @@ const TabIcon = ({ focused, icon }: TabIconProps) => {
   );
 };
 
-const TabLayout = () => (
+const TabLayout = () => {
+  const insets = useSafeAreaInsets();
+
   <Tabs
     screenOptions={{
       headerShown: false,
@@ -27,7 +31,7 @@ const TabLayout = () => (
         height: tabBar.height,
         marginHorizontal: tabBar.horizontalInset,
         borderRadius: tabBar.radius,
-        backgroundColor: colors.primary,
+        backgroundColor: "#fff9e3",
         borderTopWidth: 0,
         elevation: 0,
       },
@@ -53,7 +57,7 @@ const TabLayout = () => (
         }}
       />
     ))}
-  </Tabs>
-);
+  </Tabs>;
+};
 
 export default TabLayout;
