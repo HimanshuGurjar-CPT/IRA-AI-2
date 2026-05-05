@@ -9,10 +9,28 @@ const tabBar = components.tabBar;
 
 const TabIcon = ({ focused, icon }: TabIconProps) => {
   return (
-    <View className="tabs-icon">
-      <View>
-        <Image source={icon} resizeMode="contain" className="w-6 h-6" />
-      </View>
+    <View
+      className={`items-center justify-center w-12 h-12 rounded-full ${
+        focused ? "bg-[#39FF14]" : "bg-transparent"
+      }`}
+      style={
+        focused
+          ? {
+              shadowColor: "#39FF14",
+              shadowOffset: { width: 0, height: 0 },
+              shadowOpacity: 0.6,
+              shadowRadius: 10,
+              elevation: 5,
+            }
+          : {}
+      }
+    >
+      <Image
+        source={icon}
+        contentFit="contain"
+        tintColor={focused ? "#081126" : "#A0A0A0"}
+        className="w-6 h-6"
+      />
     </View>
   );
 };
