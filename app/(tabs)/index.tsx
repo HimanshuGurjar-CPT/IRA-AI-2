@@ -9,7 +9,7 @@ const index = () => {
     <SafeAreaView className="flex-1 items-center justify-center bg-black">
       <Text className="text-white text-6xl">IRIS-X</Text>
       <Text className="text-white text-lg mt-4 text-center">
-        Empowering visually impaired with AI
+        Your AI Assistatant is Here 🤖
       </Text>
     </SafeAreaView>
   );
