@@ -29,7 +29,7 @@ const TabIcon = ({ focused, icon }: TabIconProps) => {
         source={icon}
         contentFit="contain"
         tintColor={focused ? "#081126" : "#A0A0A0"}
-        className="w-6 h-6"
+        style={{ width: 24, height: 24 }}
       />
     </View>
   );
@@ -49,7 +49,7 @@ const TabLayout = () => {
           height: tabBar.height,
           marginHorizontal: tabBar.horizontalInset,
           borderRadius: tabBar.radius,
-          backgroundColor: "#fff9e3",
+          backgroundColor: "#000",
           borderTopWidth: 0,
           elevation: 0,
         },
