@@ -5,3 +5,6 @@ declare global {
     icon: ImageSourcePropType;
   }
 }
+
+export { };
+
