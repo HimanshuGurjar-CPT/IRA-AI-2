@@ -3,17 +3,3 @@
 @import "tailwindcss/utilities.css";
 
 @import "nativewind/theme";
-
-@layer base {
-  :root {
-    /* Colors */
-    --color-primary: #00ff41;
-    --color-dark-bg: #050505;
-    --color-card-bg: #0a0d0a;
-
-    /* Fonts (Make sure these match exactly what you loaded in _layout.tsx) */
-    --font-display: Antonio_700Bold;
-    --font-sans: Outfit_400Regular;
-    --font-mono: JetBrainsMono_400Regular;
-  }
-}
