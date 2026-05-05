@@ -11,7 +11,7 @@ const TabIcon = ({ focused, icon }: TabIconProps) => {
   return (
     <View
       className={`items-center justify-center w-12 h-12 rounded-full ${
-        focused ? "bg-[#27c40c]" : "bg-transparent"
+        focused ? "bg-[#23ad0b]" : "bg-transparent"
       }`}
       style={
         focused
@@ -28,7 +28,7 @@ const TabIcon = ({ focused, icon }: TabIconProps) => {
       <Image
         source={icon}
         contentFit="contain"
-        tintColor={focused ? "#081126" : "#999"}
+        tintColor={focused ? "#081126" : "#d0d0d0"}
         style={{ width: 24, height: 24 }}
       />
     </View>
