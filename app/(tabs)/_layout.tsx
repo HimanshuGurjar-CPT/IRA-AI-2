@@ -11,16 +11,16 @@ const TabIcon = ({ focused, icon }: TabIconProps) => {
   return (
     <View
       className={`items-center justify-center w-12 h-12 rounded-full ${
-        focused ? "bg-[#39FF14]" : "bg-transparent"
+        focused ? "bg-[#27c40c]" : "bg-transparent"
       }`}
       style={
         focused
           ? {
-              shadowColor: "#39FF14",
+              shadowColor: "#27c40c",
               shadowOffset: { width: 0, height: 0 },
-              shadowOpacity: 0.6,
-              shadowRadius: 10,
-              elevation: 5,
+              shadowOpacity: 0.8,
+              shadowRadius: 14,
+              elevation: 4,
             }
           : {}
       }
@@ -28,7 +28,7 @@ const TabIcon = ({ focused, icon }: TabIconProps) => {
       <Image
         source={icon}
         contentFit="contain"
-        tintColor={focused ? "#081126" : "#A0A0A0"}
+        tintColor={focused ? "#081126" : "#999"}
         style={{ width: 24, height: 24 }}
       />
     </View>
