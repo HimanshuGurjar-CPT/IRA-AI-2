@@ -2,7 +2,7 @@ import { tabs } from "@/constants/data";
 import { components } from "@/constants/theme";
 import { Image } from "expo-image";
 import { Tabs } from "expo-router";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const tabBar = components.tabBar;
@@ -11,7 +11,7 @@ const TabIcon = ({ focused, icon, title }: TabIconProps) => {
   return (
     <>
       <View
-        className={`items-center justify-center w-12 h-12 rounded-full ${
+        className={`items-center justify-center w-14 h-14 rounded-full ${
           focused ? "bg-[#23ad0b]" : "bg-transparent"
         }`}
         style={
@@ -33,7 +33,6 @@ const TabIcon = ({ focused, icon, title }: TabIconProps) => {
           style={{ width: 24, height: 24 }}
         />
       </View>
-      <Text className="text-white text-xs mt-2">{title}</Text>
     </>
   );
 };
