@@ -11,8 +11,15 @@ const TabLayout = () => (
           name={tab.name}
           options={{
             title: tab.title,
-            tabBarIcon: () => (
-              <Image source={tab.icon} style={{ width: 24, height: 24 }} />
+            tabBarIcon: ({ color, size, focused }) => (
+              <Image
+                source={tab.icon}
+                style={{
+                  width: size,
+                  height: size,
+                  tintColor: focused ? "#000000" : "#000000",
+                }}
+              />
             ),
           }}
         />
