@@ -73,6 +73,7 @@ IRIS:  Silencing phone... ✓
 ## Core Features
 
 ### 🎙️ Zero-Latency Neural Voice
+
 Powered by the **Gemini Live WebRTC API** — real-time, full-duplex voice that lets you interrupt mid-sentence. No loading spinners. No waiting. The conversation flows like talking to a person.
 
 - Always-on wake word detection (`Hey IRIS`) running fully on-device
@@ -83,19 +84,21 @@ Powered by the **Gemini Live WebRTC API** — real-time, full-duplex voice that 
 ---
 
 ### 📱 Deep Android Control
+
 IRIS-X has full dominion over the Android ecosystem via Intents and Accessibility Services.
 
-| Capability | What it does |
-|---|---|
-| App lifecycle | Open, close, switch any app by voice |
-| Notification commander | Read, reply, dismiss notifications hands-free |
-| Hardware control | Brightness, volume, flashlight, Wi-Fi, Bluetooth, DND |
-| App locker | Lock any app behind biometric or PIN via voice |
-| Clipboard intelligence | Monitors clipboard, auto-suggests actions |
+| Capability             | What it does                                          |
+| ---------------------- | ----------------------------------------------------- |
+| App lifecycle          | Open, close, switch any app by voice                  |
+| Notification commander | Read, reply, dismiss notifications hands-free         |
+| Hardware control       | Brightness, volume, flashlight, Wi-Fi, Bluetooth, DND |
+| App locker             | Lock any app behind biometric or PIN via voice        |
+| Clipboard intelligence | Monitors clipboard, auto-suggests actions             |
 
 ---
 
 ### ⚡ Automation Flows
+
 A visual no-code trigger-action builder. Build sequences like:
 
 ```
@@ -116,6 +119,7 @@ Flows run entirely in the background. You build them once, IRIS-X runs them fore
 ---
 
 ### 🌅 Morning Neural Briefing
+
 Every morning at your chosen time, IRIS-X auto-runs a full briefing — spoken aloud:
 
 - Today's weather
@@ -128,6 +132,7 @@ Built using cheap text API calls + native TTS. Cost to you: near zero.
 ---
 
 ### 🔐 Security Vault
+
 - **Face App Locker** — lock any app behind facial recognition
 - **Intruder Selfie** — wrong PIN triggers a silent front-camera photo + alert to you
 - **Privacy Screen** — detects shoulder surfers via front camera and blurs the display
@@ -135,28 +140,29 @@ Built using cheap text API calls + native TTS. Cost to you: near zero.
 ---
 
 ### 📍 Context-Aware Intelligence
+
 - **GPS Geofencing** — trigger automation flows based on location zones
 - **Calendar Consciousness** — reads your calendar and auto-preps context before meetings
-- **Smart Reminders** — context-based, not just time-based: *"remind me when I open WhatsApp"*
+- **Smart Reminders** — context-based, not just time-based: _"remind me when I open WhatsApp"_
 
 ---
 
 ## Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Mobile client | React Native (Expo) + NativeWind |
-| OS control | Android Intents + Accessibility Services |
-| Background jobs | `expo-task-manager` + `expo-background-fetch` |
-| Voice (STT) | `react-native-voice` |
-| Voice (TTS) | Native Android TTS engine (free) |
-| Wake word | On-device detection |
-| Vision | `expo-camera` + Gemini multimodal |
-| Location | `expo-location` + geofencing |
-| Security middleware | Express.js on Vercel |
-| Neural engine | Google Gemini 2.5 Flash + Live API |
-| Database & Auth | Supabase (PostgreSQL) |
-| Payments | Stripe + UPI gateway |
+| Layer               | Technology                                    |
+| ------------------- | --------------------------------------------- |
+| Mobile client       | React Native (Expo) + NativeWind              |
+| OS control          | Android Intents + Accessibility Services      |
+| Background jobs     | `expo-task-manager` + `expo-background-fetch` |
+| Voice (STT)         | `react-native-voice`                          |
+| Voice (TTS)         | Native Android TTS engine (free)              |
+| Wake word           | On-device detection                           |
+| Vision              | `expo-camera` + Gemini multimodal             |
+| Location            | `expo-location` + geofencing                  |
+| Security middleware | Express.js on Vercel                          |
+| Neural engine       | Google Gemini 2.5 Flash + Live API            |
+| Database & Auth     | Supabase (PostgreSQL)                         |
+| Payments            | Stripe + UPI gateway                          |
 
 ---
 
@@ -171,11 +177,13 @@ IRIS-X is a **subscription-first** product designed for profitability from day o
 To protect margins against API costs, every user receives a daily **Neural Bandwidth** allocation — a cap on voice minutes and command volume per day. The Vercel middleware enforces this on every request before the Gemini key is injected.
 
 **Why this works:**
+
 - Average user won't hit the cap in normal daily usage
 - Power users who want more become upsell targets
 - Server costs stay near zero using the edge architecture below
 
 **Cost-saving edge architecture:**
+
 - Background briefings fetch cheap text from Gemini (`$4.50 / 1M tokens`)
 - Audio is rendered locally using the phone's native TTS engine (completely free)
 - Gemini Live audio output (`$0.018/min`) is used only for real-time conversation
@@ -184,20 +192,20 @@ To protect margins against API costs, every user receives a daily **Neural Bandw
 
 ## Subscription Tiers
 
-| Feature | Free Preview | IRIS-X Pro (₹399/mo) |
-|---|---|---|
-| Basic voice commands | ✓ | ✓ |
-| Manual app control | ✓ | ✓ |
-| 10 commands/day | ✓ | — |
-| Full Neural Bandwidth | — | ✓ |
-| Wake word always-on | — | ✓ |
-| Background automation | — | ✓ |
-| Automation flow builder | — | ✓ |
-| Notification commander | — | ✓ |
-| Morning briefing | — | ✓ |
-| Intruder Selfie | — | ✓ |
-| Geofence triggers | — | ✓ |
-| Priority support | — | ✓ |
+| Feature                 | Free Preview | IRIS-X Pro (₹399/mo) |
+| ----------------------- | ------------ | -------------------- |
+| Basic voice commands    | ✓            | ✓                    |
+| Manual app control      | ✓            | ✓                    |
+| 10 commands/day         | ✓            | —                    |
+| Full Neural Bandwidth   | —            | ✓                    |
+| Wake word always-on     | —            | ✓                    |
+| Background automation   | —            | ✓                    |
+| Automation flow builder | —            | ✓                    |
+| Notification commander  | —            | ✓                    |
+| Morning briefing        | —            | ✓                    |
+| Intruder Selfie         | —            | ✓                    |
+| Geofence triggers       | —            | ✓                    |
+| Priority support        | —            | ✓                    |
 
 ---
 
@@ -247,11 +255,11 @@ All authentication is handled via Supabase with Row Level Security enforced at t
 
 IRIS-X is part of a broader ecosystem:
 
-| Product | Platform | Status |
-|---|---|---|
+| Product                                        | Platform        | Status                |
+| ---------------------------------------------- | --------------- | --------------------- |
 | [IRIS AI](https://github.com/201Harsh/IRIS-AI) | Windows Desktop | ✅ Live — Open Source |
-| IRIS-X | Android Mobile | 🔨 In Development |
-| IRIS Cloud | Web | 🔮 Planned |
+| IRIS-X                                         | Android Mobile  | 🔨 In Development     |
+| IRIS Cloud                                     | Web             | 🔮 Planned            |
 
 ---
 
@@ -279,5 +287,6 @@ The source code is not open for distribution, modification, or reuse without exp
 <div align="center">
 <img src="https://capsule-render.vercel.app/api?type=waving&color=1aff6e&height=120&section=footer&fontColor=ffffff" width="100%"/>
 
-*Made with intent by Harsh Pandey*
+_Made with intent by Harsh Pandey_
+
 </div>
