@@ -1,7 +1,10 @@
 import { tabs } from "@/constants/data";
+import { clsx } from "clsx";
 import { Image } from "expo-image";
 import { Tabs } from "expo-router";
 import { View } from "react-native-reanimated/lib/typescript/Animated";
+
+const tabBar = components.tabBar;
 
 const TabIcon = ({ focused, icon }: TabIconProps) => {
   return (
@@ -14,30 +17,42 @@ const TabIcon = ({ focused, icon }: TabIconProps) => {
 };
 
 const TabLayout = () => (
-  <Tabs screenOptions={{ headerShown: false }}>
-    {tabs.map((tab) => {
-      return (
-        <Tabs.Screen
-          key={tab.name}
-          name={tab.name}
-          options={{
-            headerShown: false,
-            tabBarActiveTintColor: "#4AB058",
-            title: tab.title,
-            tabBarIcon: ({ color, size, focused }) => (
-              <Image
-                source={tab.icon}
-                style={{
-                  width: size,
-                  height: size,
-                  tintColor: focused ? "#4AB058" : color,
-                }}
-              />
-            ),
-          }}
-        />
-      );
-    })}
+  <Tabs
+    screenOptions={{
+      headerShown: false,
+      tabBarShowLabel: false,
+      tabBarStyle: {
+        position: "absolute",
+        bottom: Math.max(insets.bottom, tabBar.horizontalInset),
+        height: tabBar.height,
+        marginHorizontal: tabBar.horizontalInset,
+        borderRadius: tabBar.radius,
+        backgroundColor: colors.primary,
+        borderTopWidth: 0,
+        elevation: 0,
+      },
+      tabBarItemStyle: {
+        paddingVertical: tabBar.height / 2 - tabBar.iconFrame / 1.6,
+      },
+      tabBarIconStyle: {
+        width: tabBar.iconFrame,
+        height: tabBar.iconFrame,
+        alignItems: "center",
+      },
+    }}
+  >
+    {tabs.map((tab) => (
+      <Tabs.Screen
+        key={tab.name}
+        name={tab.name}
+        options={{
+          title: tab.title,
+          tabBarIcon: ({ focused }) => (
+            <TabIcon focused={focused} icon={tab.icon} />
+          ),
+        }}
+      />
+    ))}
   </Tabs>
 );
 
