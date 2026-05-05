@@ -2,36 +2,39 @@ import { tabs } from "@/constants/data";
 import { components } from "@/constants/theme";
 import { Image } from "expo-image";
 import { Tabs } from "expo-router";
-import { View } from "react-native";
+import { Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const tabBar = components.tabBar;
 
-const TabIcon = ({ focused, icon }: TabIconProps) => {
+const TabIcon = ({ focused, icon, title }: TabIconProps) => {
   return (
-    <View
-      className={`items-center justify-center w-12 h-12 rounded-full ${
-        focused ? "bg-[#23ad0b]" : "bg-transparent"
-      }`}
-      style={
-        focused
-          ? {
-              shadowColor: "#27c40c",
-              shadowOffset: { width: 0, height: 0 },
-              shadowOpacity: 0.8,
-              shadowRadius: 14,
-              elevation: 4,
-            }
-          : {}
-      }
-    >
-      <Image
-        source={icon}
-        contentFit="contain"
-        tintColor={focused ? "#081126" : "#d0d0d0"}
-        style={{ width: 24, height: 24 }}
-      />
-    </View>
+    <>
+      <View
+        className={`items-center justify-center w-12 h-12 rounded-full ${
+          focused ? "bg-[#23ad0b]" : "bg-transparent"
+        }`}
+        style={
+          focused
+            ? {
+                shadowColor: "#27c40c",
+                shadowOffset: { width: 0, height: 0 },
+                shadowOpacity: 0.8,
+                shadowRadius: 14,
+                elevation: 4,
+              }
+            : {}
+        }
+      >
+        <Image
+          source={icon}
+          contentFit="contain"
+          tintColor={focused ? "#081126" : "#d0d0d0"}
+          style={{ width: 24, height: 24 }}
+        />
+      </View>
+      <Text className="text-white text-xs mt-2">{title}</Text>
+    </>
   );
 };
 
@@ -70,7 +73,7 @@ const TabLayout = () => {
           options={{
             title: tab.title,
             tabBarIcon: ({ focused }) => (
-              <TabIcon focused={focused} icon={tab.icon} />
+              <TabIcon focused={focused} icon={tab.icon} title={tab.title} />
             ),
           }}
         />
