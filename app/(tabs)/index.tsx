@@ -9,7 +9,7 @@ const index = () => {
   return (
     <SafeAreaView className="flex-1 bg-black p-5">
       <IrisHeader />
-      <Text className="text-white text-6xl mt-20">IRIS-X</Text>
+      <Text className="text-white text-6xl mt-20 ">IRIS-X</Text>
       <Text className="text-white text-lg mt-4 text-center">
         Your AI Assistatant is Here 🤖
       </Text>
