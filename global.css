@@ -3,3 +3,19 @@
 @import "tailwindcss/utilities.css";
 
 @import "nativewind/theme";
+
+@theme {
+  /* === Antonio Fonts (Display/Headers) === */
+  --font-antonio-bold: "Antonio-Bold";
+  --font-antonio-medium: "Antonio-Medium";
+  --font-antonio-regular: "Antonio-Regular";
+  --font-antonio-semibold: "Antonio-SemiBold";
+
+  /* === Outfit Fonts (UI/Body) === */
+  --font-outfit-extralight: "Outfit-ExtraLight";
+  --font-outfit-light: "Outfit-Light";
+  --font-outfit-medium: "Outfit-Medium";
+  --font-outfit-regular: "Outfit-Regular";
+  --font-outfit-semibold: "Outfit-SemiBold";
+  --font-outfit-thin: "Outfit-Thin";
+}
