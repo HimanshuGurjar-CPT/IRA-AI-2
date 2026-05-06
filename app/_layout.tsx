@@ -6,7 +6,6 @@ import { useEffect } from "react";
 
 export default function RootLayout() {
   const [fontLoaded] = useFonts({
-    // You MUST use require() for local assets
     "Antonio-Bold": require("../assets/fonts/Antonio-Bold.ttf"),
     "Antonio-Medium": require("../assets/fonts/Antonio-Medium.ttf"),
     "Antonio-Regular": require("../assets/fonts/Antonio-Regular.ttf"),
