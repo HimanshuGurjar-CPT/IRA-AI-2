@@ -6,16 +6,17 @@ import { useEffect } from "react";
 
 export default function RootLayout() {
   const [fontLoaded] = useFonts({
-    "Antonio-Bold": "../assets/fonts/Antonio-Bold.ttf",
-    "Antonio-Medium": "../assets/fonts/Antonio-Medium.ttf",
-    "Antonio-Regular": "../assets/fonts/Antonio-Regular.ttf",
-    "Antonio-SemiBold": "../assets/fonts/Antonio-SemiBold.ttf",
-    "Outfit-ExtraLight": "../assets/fonts/Outfit-ExtraLight.ttf",
-    "Outfit-Light": "../assets/fonts/Outfit-Light.ttf",
-    "Outfit-Medium": "../assets/fonts/Outfit-Medium.ttf",
-    "Outfit-Regular": "../assets/fonts/Outfit-Regular.ttf",
-    "Outfit-SemiBold": "../assets/fonts/Outfit-SemiBold.ttf",
-    "Outfit-Thin": "../assets/fonts/Outfit-Thin.ttf",
+    // You MUST use require() for local assets
+    "Antonio-Bold": require("../assets/fonts/Antonio-Bold.ttf"),
+    "Antonio-Medium": require("../assets/fonts/Antonio-Medium.ttf"),
+    "Antonio-Regular": require("../assets/fonts/Antonio-Regular.ttf"),
+    "Antonio-SemiBold": require("../assets/fonts/Antonio-SemiBold.ttf"),
+    "Outfit-ExtraLight": require("../assets/fonts/Outfit-ExtraLight.ttf"),
+    "Outfit-Light": require("../assets/fonts/Outfit-Light.ttf"),
+    "Outfit-Medium": require("../assets/fonts/Outfit-Medium.ttf"),
+    "Outfit-Regular": require("../assets/fonts/Outfit-Regular.ttf"),
+    "Outfit-SemiBold": require("../assets/fonts/Outfit-SemiBold.ttf"),
+    "Outfit-Thin": require("../assets/fonts/Outfit-Thin.ttf"),
   });
 
   useEffect(() => {
