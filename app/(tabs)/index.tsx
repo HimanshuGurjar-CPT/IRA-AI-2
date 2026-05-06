@@ -12,13 +12,13 @@ const index = () => {
       <Text className="text-white text-6xl mt-20 font-antonio-bold">
         IRIS-X
       </Text>
-      <Text className="text-white text-xl mt-4 text-center font-outfit-light">
+      <Text className="text-white text-xl mt-4 text-center font-outfit-medium">
         Your AI Assistatant is Here 🤖
       </Text>
       <View className="flex-1">
         <TouchableOpacity className="bg-white rounded-full py-3 px-5">
           <Text className="text-black text-center font-outfit-medium">
-            Start Chat
+            Start Chatting
           </Text>
         </TouchableOpacity>
       </View>
