@@ -6,7 +6,7 @@ const IrisHeader = () => {
   return (
     <>
       <View className="border-b border-green-400 w-full justify-between px-5 pb-5 items-center flex-row">
-        <SignalHighIcon color="green" size={32} />
+        <SignalHighIcon color="#22c55e" size={32} />
         <View>
           <Text className="text-white text-3xl text-center font-antonio-bold tracking-wider">
             IRIS-
@@ -14,7 +14,7 @@ const IrisHeader = () => {
           </Text>
         </View>
         <View>
-          <LucideBellDot color="white" size={28} />
+          <LucideBellDot color="#22c55e" size={28} />
         </View>
       </View>
     </>
