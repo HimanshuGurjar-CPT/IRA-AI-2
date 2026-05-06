@@ -1,8 +1,26 @@
 import "@/global.css";
+import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 
 export default function RootLayout() {
+  const [fontLoaded] = useFonts({
+    "Antonio-Bold": "../assets/fonts/Antonio-Bold.ttf",
+    "Antonio-Medium": "../assets/fonts/Antonio-Medium.ttf",
+    "Antonio-Regular": "../assets/fonts/Antonio-Regular.ttf",
+    "Antonio-SemiBold": "../assets/fonts/Antonio-SemiBold.ttf",
+    "Outfit-ExtraLight": "../assets/fonts/Outfit-ExtraLight.ttf",
+    "Outfit-Light": "../assets/fonts/Outfit-Light.ttf",
+    "Outfit-Medium": "../assets/fonts/Outfit-Medium.ttf",
+    "Outfit-Regular": "../assets/fonts/Outfit-Regular.ttf",
+    "Outfit-SemiBold": "../assets/fonts/Outfit-SemiBold.ttf",
+    "Outfit-Thin": "../assets/fonts/Outfit-Thin.ttf",
+  });
+
+  if (!fontLoaded) {
+    return null;
+  }
+
   return (
     <>
       <StatusBar style="light" />
