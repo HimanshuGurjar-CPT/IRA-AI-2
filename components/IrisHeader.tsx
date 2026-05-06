@@ -1,20 +1,21 @@
-import { SignalHighIcon } from "lucide-react-native";
+import { LucideBellDot, SignalHighIcon } from "lucide-react-native";
 import React from "react";
 import { Text, View } from "react-native";
 
 const IrisHeader = () => {
   return (
     <>
-      <View className="h-24 bg-green-400 w-full flex-row">
-        <SignalHighIcon color="white" size={28} />
-      </View>
-      <View>
-        <Text className="text-white text-xl mt-4 text-center font-outfit-medium">
-          IRIS-X
-        </Text>
-        <Text className="text-white text-xl mt-4 text-center font-outfit-medium">
-          Artificial Intelligence
-        </Text>
+      <View className="border-b border-green-400 w-full justify-between px-5 pb-5 items-center flex-row">
+        <SignalHighIcon color="green" size={32} />
+        <View>
+          <Text className="text-white text-3xl text-center font-antonio-bold tracking-wider">
+            IRIS-
+            <Text className="text-green-400">X</Text>
+          </Text>
+        </View>
+        <View>
+          <LucideBellDot color="white" size={28} />
+        </View>
       </View>
     </>
   );
