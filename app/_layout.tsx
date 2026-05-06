@@ -1,7 +1,8 @@
 import "@/global.css";
 import { useFonts } from "expo-font";
-import { Stack } from "expo-router";
+import { SplashScreen, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
+import { useEffect } from "react";
 
 export default function RootLayout() {
   const [fontLoaded] = useFonts({
@@ -16,6 +17,12 @@ export default function RootLayout() {
     "Outfit-SemiBold": "../assets/fonts/Outfit-SemiBold.ttf",
     "Outfit-Thin": "../assets/fonts/Outfit-Thin.ttf",
   });
+
+  useEffect(() => {
+    if (fontLoaded) {
+      SplashScreen.hideAsync();
+    }
+  }, [fontLoaded]);
 
   if (!fontLoaded) {
     return null;
