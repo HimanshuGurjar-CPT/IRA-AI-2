@@ -1,8 +1,14 @@
 import React from "react";
-import { View } from "react-native";
+import { Text, View } from "react-native";
 
 const IrisHeader = () => {
-  return <View className="flex flex-row items-center gap-2"></View>;
+  return (
+    <>
+      <View>
+        <Text className="text-white text-6xl">IRIS-X</Text>
+      </View>
+    </>
+  );
 };
 
 export default IrisHeader;
