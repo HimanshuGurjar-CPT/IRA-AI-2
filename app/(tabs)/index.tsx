@@ -1,3 +1,4 @@
+import CommandCard from "@/components/CommandCard";
 import IrisHeader from "@/components/IrisHeader";
 import VoiceNode from "@/components/VoiceNode";
 import { styled } from "nativewind";
@@ -10,6 +11,7 @@ const index = () => {
     <SafeAreaView className="flex-1 bg-black p-5">
       <IrisHeader />
       <VoiceNode />
+      <CommandCard />
     </SafeAreaView>
   );
 };
