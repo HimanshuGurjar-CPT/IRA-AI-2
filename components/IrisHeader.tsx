@@ -10,7 +10,7 @@ const IrisHeader = () => {
         <View>
           <Text className="text-white text-3xl text-center font-antonio-bold tracking-wider">
             IRIS
-            <Text className="text-primary">-X</Text>
+            <Text className="text-text-main">-X</Text>
           </Text>
         </View>
         <View>
