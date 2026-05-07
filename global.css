@@ -25,8 +25,8 @@
   --color-main: #00ff55;
 
   --animate-ripple-1: sonarRipple 2s ease-out infinite;
-  --animate-ripple-2: sonarRipple 2s ease-out infinite 0.6s;
-  --animate-ripple-3: sonarRipple 2s ease-out infinite 1.2s;
+  --animate-ripple-2: sonarRipple 2s ease-out infinite 0.8s;
+  --animate-ripple-3: sonarRipple 2s ease-out infinite 1.5s;
 }
 
 @keyframes sonarRipple {
