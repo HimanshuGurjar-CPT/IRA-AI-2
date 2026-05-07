@@ -22,7 +22,7 @@
   --color-primary: #02c944;
   --color-background: #000000;
   --color-card: #0a0a0a;
-  --color-card-2: #090909;
+  --color-card-2: #080808;
   --color-muted: #285c37;
   --color-main: #00ff55;
 
@@ -44,5 +44,5 @@
 }
 
 html {
-  background: #050505;
+  background: #080808;
 }
