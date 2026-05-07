@@ -5,17 +5,17 @@ import { Text, TouchableOpacity, View } from "react-native";
 const IrisHeader = () => {
   return (
     <>
-      <View className="border-b border-green-400 w-full justify-between px-5 pb-5 items-center flex-row">
-        <SignalHighIcon color="#22c55e" size={32} />
+      <View className="border-b border-primary w-full justify-between px-5 pb-5 items-center flex-row">
+        <SignalHighIcon color="#02c944" size={32} />
         <View>
           <Text className="text-white text-3xl text-center font-antonio-bold tracking-wider">
             IRIS
-            <Text className="text-green-400">-X</Text>
+            <Text className="text-primary">-X</Text>
           </Text>
         </View>
         <View>
           <TouchableOpacity>
-            <LucideBellDot color="#22c55e" size={28} />
+            <LucideBellDot color="#02c944" size={28} />
           </TouchableOpacity>
         </View>
       </View>
