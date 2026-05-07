@@ -5,7 +5,7 @@ import { Text, View } from "react-native";
 const CommandCard = () => {
   return (
     <View className="flex-1 items-center justify-center">
-      <View className="bg-card-2 p-8 rounded-4xl border border-white/40 border-l-[3px] border-l-main">
+      <View className="bg-card-2 p-8 rounded-4xl border border-white/50 border-l-[3px] border-l-main">
         <Text className="text-muted text-sm tracking-tight uppercase font-outfit-regular mb-3">
           Last Command
         </Text>
