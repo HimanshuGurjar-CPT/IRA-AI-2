@@ -5,13 +5,11 @@
 @import "nativewind/theme";
 
 @theme {
-  /* === Antonio Fonts (Display/Headers) === */
   --font-antonio-bold: "Antonio-Bold";
   --font-antonio-medium: "Antonio-Medium";
   --font-antonio-regular: "Antonio-Regular";
   --font-antonio-semibold: "Antonio-SemiBold";
 
-  /* === Outfit Fonts (UI/Body) === */
   --font-outfit-extralight: "Outfit-ExtraLight";
   --font-outfit-light: "Outfit-Light";
   --font-outfit-medium: "Outfit-Medium";
@@ -22,15 +20,15 @@
   --color-primary: #02c944;
   --color-background: #000000;
   --color-card: #0a0a0a;
-  --color-muted: #1b3b24;
+  --color-card-2: #080808;
+  --color-muted: #285c37;
   --color-main: #00ff55;
 
   --animate-ripple-1: sonarRipple 2s ease-out infinite;
-  --animate-ripple-2: sonarRipple 2s ease-out infinite 0.6s;
-  --animate-ripple-3: sonarRipple 2s ease-out infinite 1.2s;
+  --animate-ripple-2: sonarRipple 2s ease-out infinite 0.8s;
+  --animate-ripple-3: sonarRipple 2s ease-out infinite 1.5s;
 }
 
-/* The actual CSS animation */
 @keyframes sonarRipple {
   0% {
     border-color: rgba(0, 255, 85, 0.6);
@@ -40,4 +38,8 @@
     border-color: rgba(0, 255, 85, 0.05);
     background-color: transparent;
   }
+}
+
+html {
+  background: #080808;
 }
