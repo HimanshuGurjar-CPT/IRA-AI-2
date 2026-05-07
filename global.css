@@ -18,4 +18,10 @@
   --font-outfit-regular: "Outfit-Regular";
   --font-outfit-semibold: "Outfit-SemiBold";
   --font-outfit-thin: "Outfit-Thin";
+
+  --color-primary: #00ff55;
+  --color-background: #000000;
+  --color-card: #0a0a0a;
+  --color-muted: #1b3b24;
+  --color-text-main: #f4f4f4;
 }
