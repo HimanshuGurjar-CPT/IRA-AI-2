@@ -5,13 +5,11 @@
 @import "nativewind/theme";
 
 @theme {
-  /* === Antonio Fonts (Display/Headers) === */
   --font-antonio-bold: "Antonio-Bold";
   --font-antonio-medium: "Antonio-Medium";
   --font-antonio-regular: "Antonio-Regular";
   --font-antonio-semibold: "Antonio-SemiBold";
 
-  /* === Outfit Fonts (UI/Body) === */
   --font-outfit-extralight: "Outfit-ExtraLight";
   --font-outfit-light: "Outfit-Light";
   --font-outfit-medium: "Outfit-Medium";
@@ -31,7 +29,6 @@
   --animate-ripple-3: sonarRipple 2s ease-out infinite 1.2s;
 }
 
-/* The actual CSS animation */
 @keyframes sonarRipple {
   0% {
     border-color: rgba(0, 255, 85, 0.6);
