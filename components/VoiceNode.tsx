@@ -2,6 +2,9 @@ import { Mic } from "lucide-react-native";
 import React, { useEffect, useRef, useState } from "react";
 import { Animated, Pressable, Text, View } from "react-native";
 
+// We wrap Pressable in Animated to allow dynamic styling on the button itself
+const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
+
 const VoiceNode = () => {
   const [listening, setListening] = useState(false);
 
@@ -22,7 +25,7 @@ const VoiceNode = () => {
             duration: 1400,
             useNativeDriver: false,
           }),
-        ])
+        ]),
       ).start();
     } else {
       pulseAnim.stopAnimation();
@@ -30,117 +33,42 @@ const VoiceNode = () => {
     }
   }, [listening]);
 
+  // Using rgb values of your --color-main (#00ff55) for the animation
   const borderColor = pulseAnim.interpolate({
     inputRange: [0, 1],
-    outputRange: ["rgba(26,255,110,0.35)", "rgba(26,255,110,1)"],
+    outputRange: ["rgba(0, 255, 85, 0.35)", "rgba(0, 255, 85, 1)"],
   });
 
   return (
-    <View className="flex-1 items-center justify-center bg-black">
-
+    <View className="flex-1 items-center justify-center bg-background">
       {/* Outer ring 3 */}
-      <View
-        style={{ width: 220, height: 220, borderRadius: 110, borderWidth: 0.5, borderColor: "#0a150a" }}
-        className="items-center justify-center"
-      >
+      <View className="w-55 h-55 rounded-full border-[0.5px] border-[#0a150a] items-center justify-center">
         {/* Outer ring 2 */}
-        <View
-          style={{ width: 182, height: 182, borderRadius: 91, borderWidth: 0.5, borderColor: "#0f200f" }}
-          className="items-center justify-center"
-        >
+        <View className="w-45.5 h-45.5 rounded-full border-[0.5px] border-[#0f200f] items-center justify-center">
           {/* Outer ring 1 */}
-          <View
-            style={{ width: 146, height: 146, borderRadius: 73, borderWidth: 1, borderColor: "rgba(26,255,110,0.08)" }}
-            className="items-center justify-center"
-          >
-
-            {/* Orb — animated border when listening */}
-            <Animated.View
+          <View className="w-36.5 h-36.5 rounded-full border border-main/10 items-center justify-center">
+            {/* Interactive Orb — Toggles state on press */}
+            <AnimatedPressable
+              onPress={() => setListening(!listening)}
+              className="w-28 h-28 rounded-full border-[1.5px] bg-background items-center justify-center"
               style={{
-                width: 112,
-                height: 112,
-                borderRadius: 56,
-                borderWidth: 1.5,
-                borderColor: listening ? borderColor : "rgba(26,255,110,0.4)",
-                backgroundColor: "#000",
-                alignItems: "center",
-                justifyContent: "center",
+                borderColor: listening ? borderColor : "rgba(0, 255, 85, 0.4)",
               }}
             >
-              <Mic color="#1aff6e" size={36} strokeWidth={1.5} />
-            </Animated.View>
-
+              <Mic color="#00ff55" size={36} strokeWidth={1.5} />
+            </AnimatedPressable>
           </View>
         </View>
       </View>
 
-      {/* Label */}
+      {/* Dynamic Label */}
       <Text
-        style={{
-          marginTop: 20,
-          fontSize: 11,
-          letterSpacing: 3,
-          textTransform: "uppercase",
-          fontFamily: "JetBrainsMono",
-          color: listening ? "#1aff6e" : "#1a3a1a",
-        }}
+        className={`mt-8 text-[11px] tracking-[3px] uppercase font-mono ${
+          listening ? "text-main" : "text-muted"
+        }`}
       >
         {listening ? "listening..." : "tap to speak"}
       </Text>
-        
-      {/* Tap to speak / Stop button */}
-      <View className="mt-8">
-        {!listening ? (
-          <Pressable
-            onPress={() => setListening(true)}
-            style={{
-              borderWidth: 0.5,
-              borderColor: "rgba(26,255,110,0.4)",
-              borderRadius: 8,
-              paddingVertical: 10,
-              paddingHorizontal: 28,
-              backgroundColor: "#050f05",
-            }}
-          >
-            <Text
-              style={{
-                color: "#1aff6e",
-                fontSize: 11,
-                letterSpacing: 2,
-                textTransform: "uppercase",
-                fontFamily: "JetBrainsMono",
-              }}
-            >
-              Speak
-            </Text>
-          </Pressable>
-        ) : (
-          <Pressable
-            onPress={() => setListening(false)}
-            style={{
-              borderWidth: 0.5,
-              borderColor: "rgba(255,60,60,0.5)",
-              borderRadius: 8,
-              paddingVertical: 10,
-              paddingHorizontal: 28,
-              backgroundColor: "#0f0505",
-            }}
-          >
-            <Text
-              style={{
-                color: "#ff4444",
-                fontSize: 11,
-                letterSpacing: 2,
-                textTransform: "uppercase",
-                fontFamily: "JetBrainsMono",
-              }}
-            >
-              Stop
-            </Text>
-          </Pressable>
-        )}
-      </View>
-
     </View>
   );
 };
