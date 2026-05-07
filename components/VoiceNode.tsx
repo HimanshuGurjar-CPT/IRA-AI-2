@@ -38,7 +38,7 @@ const VoiceNode = () => {
 
   return (
     <View className="flex-1 items-center justify-center bg-background">
-      <View className="w-55 h-55 rounded-full border-[0.5px] border-[#0a150a] items-center justify-center">
+      <View className="w-85 h-85 rounded-full border-[0.5px] border-[#0a150a] items-center justify-center">
         <View className="w-45.5 h-45.5 rounded-full border-[0.5px] border-[#0f200f] items-center justify-center">
           <View className="w-36.5 h-36.5 rounded-full border border-main/10 items-center justify-center">
             <AnimatedPressable
