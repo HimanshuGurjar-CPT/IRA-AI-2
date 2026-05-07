@@ -1,6 +1,6 @@
 import { LucideBellDot, SignalHighIcon } from "lucide-react-native";
 import React from "react";
-import { Button, Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 
 const IrisHeader = () => {
   return (
@@ -9,13 +9,13 @@ const IrisHeader = () => {
         <SignalHighIcon color="#22c55e" size={32} />
         <View>
           <Text className="text-white text-3xl text-center font-antonio-bold tracking-wider">
-            IRIS-
-            <Text className="text-green-400">X</Text>
+            IRIS
+            <Text className="text-green-400">-X</Text>
           </Text>
         </View>
         <View>
           <TouchableOpacity>
-            <LucideBellDot color="white" size={28} />
+            <LucideBellDot color="#22c55e" size={28} />
           </TouchableOpacity>
         </View>
       </View>
