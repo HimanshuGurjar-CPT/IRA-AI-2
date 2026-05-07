@@ -29,7 +29,7 @@ const TabIcon = ({ focused, icon }: TabIconProps) => {
         <Image
           source={icon}
           contentFit="contain"
-          tintColor={focused ? "#000" : "#d0d0d0"}
+          tintColor={focused ? "#000" : "#fff"}
           style={{ width: 24, height: 24 }}
         />
       </View>
