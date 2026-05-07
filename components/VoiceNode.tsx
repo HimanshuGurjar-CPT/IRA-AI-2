@@ -31,6 +31,7 @@ const VoiceNode = () => {
     }
   }, [listening]);
 
+  // Using rgb values of your --color-main (#00ff55) for the animation
   const borderColor = pulseAnim.interpolate({
     inputRange: [0, 1],
     outputRange: ["rgba(0, 255, 85, 0.35)", "rgba(0, 255, 85, 1)"],
@@ -38,9 +39,25 @@ const VoiceNode = () => {
 
   return (
     <View className="flex-1 items-center justify-center bg-background">
-      <View className="w-85 h-85 rounded-full border-[0.5px] border-[#0a150a] items-center justify-center">
-        <View className="w-45.5 h-45.5 rounded-full border-[0.5px] border-[#0f200f] items-center justify-center">
-          <View className="w-36.5 h-36.5 rounded-full border border-main/10 items-center justify-center">
+      {/* Outer ring 3 */}
+      <View
+        className={`w-55 h-55 rounded-full border-[0.5px] items-center justify-center ${
+          listening ? "animate-ripple-3" : "border-[#0a150a]"
+        }`}
+      >
+        {/* Outer ring 2 */}
+        <View
+          className={`w-45.5 h-45.5 rounded-full border-[0.5px] items-center justify-center ${
+            listening ? "animate-ripple-2" : "border-[#0f200f]"
+          }`}
+        >
+          {/* Outer ring 1 */}
+          <View
+            className={`w-36.5 h-36.5 rounded-full border items-center justify-center ${
+              listening ? "animate-ripple-1" : "border-main/10"
+            }`}
+          >
+            {/* Interactive Orb — Toggles state on press */}
             <AnimatedPressable
               onPress={() => setListening(!listening)}
               className="w-28 h-28 rounded-full border-[1.5px] bg-background items-center justify-center"
@@ -54,6 +71,7 @@ const VoiceNode = () => {
         </View>
       </View>
 
+      {/* Dynamic Label */}
       <Text
         className={`mt-8 text-[11px] tracking-[3px] uppercase font-mono ${
           listening ? "text-main" : "text-muted"

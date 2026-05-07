@@ -24,4 +24,20 @@
   --color-card: #0a0a0a;
   --color-muted: #1b3b24;
   --color-main: #00ff55;
+
+  --animate-ripple-1: sonarRipple 2s ease-out infinite;
+  --animate-ripple-2: sonarRipple 2s ease-out infinite 0.6s;
+  --animate-ripple-3: sonarRipple 2s ease-out infinite 1.2s;
+}
+
+/* The actual CSS animation */
+@keyframes sonarRipple {
+  0% {
+    border-color: rgba(0, 255, 85, 0.6);
+    background-color: rgba(0, 255, 85, 0.08);
+  }
+  100% {
+    border-color: rgba(0, 255, 85, 0.05);
+    background-color: transparent;
+  }
 }
