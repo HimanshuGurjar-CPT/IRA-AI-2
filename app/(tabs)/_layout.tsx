@@ -12,12 +12,12 @@ const TabIcon = ({ focused, icon }: TabIconProps) => {
     <>
       <View
         className={`items-center justify-center w-14 h-14 rounded-full ${
-          focused ? "bg-[#27c40c]" : "bg-transparent"
+          focused ? "bg-primary" : "bg-transparent"
         }`}
         style={
           focused
             ? {
-                shadowColor: "#00FF55",
+                shadowColor: "#1B3B24",
                 shadowOffset: { width: 0, height: 0 },
                 shadowOpacity: 0.8,
                 shadowRadius: 14,
