@@ -42,3 +42,12 @@ app-example
 /android
 builds
 
+# .gitignore in Public Repo
+.env
+.env.local
+.env.production
+*.pem
+*.keystore
+node_modules/
+.expo/
+
