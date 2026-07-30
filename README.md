@@ -91,34 +91,39 @@ WhatsApp / Spotify / Calls / Settings / Camera / Overlays
 # ✨ Core Mobile Capabilities
 
 ### 💬 WhatsApp & Direct Communication
+
 - **Send WhatsApp Messages:** Compose and launch direct WhatsApp messages to any contact by name.
-  - *Commands:* "Send a WhatsApp message to Sidhu saying I'm on my way", "Message Mom on WhatsApp"
+  - _Commands:_ "Send a WhatsApp message to Sidhu saying I'm on my way", "Message Mom on WhatsApp"
 - **Phone Calls & SMS:** Search device contacts and trigger calls or text messages instantly.
-  - *Commands:* "Call Alex", "Send an SMS to Rahul saying call me back"
+  - _Commands:_ "Call Alex", "Send an SMS to Rahul saying call me back"
 
 ### 🎵 Deep Link App Launching & Media Controls
+
 - **YouTube Playback:** Search and play any song or video on YouTube instantly.
-  - *Commands:* "Play Believer on YouTube", "Open YouTube and search podcast"
+  - _Commands:_ "Play Believer on YouTube", "Open YouTube and search podcast"
 - **Spotify Streaming:** Trigger native Spotify music streaming for songs, artists, or playlists.
-  - *Commands:* "Play synthwave on Spotify", "Resume Spotify music"
+  - _Commands:_ "Play synthwave on Spotify", "Resume Spotify music"
 - **Open Any App:** Launch any native mobile application installed on your device.
-  - *Commands:* "Open Settings", "Launch Instagram", "Open Chrome"
+  - _Commands:_ "Open Settings", "Launch Instagram", "Open Chrome"
 
 ### ⚡ Hardware & System Controls
+
 - **Flashlight Control:** Instantly toggle your device's LED flashlight on or off.
-  - *Commands:* "Turn on flashlight", "Turn off flashlight"
+  - _Commands:_ "Turn on flashlight", "Turn off flashlight"
 - **System Settings Teleport:** Direct navigation to Wi-Fi, Bluetooth, Location, and Hotspot control panels.
-  - *Commands:* "Open Wi-Fi settings", "Turn on Bluetooth settings"
+  - _Commands:_ "Open Wi-Fi settings", "Turn on Bluetooth settings"
 
 ### 📅 Calendar & Memory Management
+
 - **Calendar Scheduling:** Check upcoming events and create new meetings in your device calendar.
-  - *Commands:* "What's on my calendar for today?", "Schedule a meeting for tomorrow at 3 PM"
+  - _Commands:_ "What's on my calendar for today?", "Schedule a meeting for tomorrow at 3 PM"
 - **Persistent AI Memory:** Remember important user facts, preferences, and notes across sessions.
-  - *Commands:* "Remember my car parking spot is level 2", "What is my car parking spot?"
+  - _Commands:_ "Remember my car parking spot is level 2", "What is my car parking spot?"
 
 ### 👁️ Multimodal Screen Vision & Floating Overlay
+
 - **Real-Time Screen Capture:** Stream your live mobile screen directly to IRIS to ask questions about anything displayed.
-  - *Commands:* "Look at my screen and summarize this article", "What code error is showing on screen?"
+  - _Commands:_ "Look at my screen and summarize this article", "What code error is showing on screen?"
 - **Floating System Dock:** A glassmorphic quick-dock allowing instant voice mute, screen vision toggle, and status monitoring.
 
 ---
@@ -141,19 +146,21 @@ To use the full IRIS-MX Mobile AI Voice Assistant, you must activate a **Mobile 
 - 💳 **Purchase Mobile PRO License:** [https://www.irisxai.in/pricing/iris-mx](https://www.irisxai.in/pricing/iris-mx)
 - 📲 **Download Official Mobile APK:** [https://www.irisxai.in/download/mobile](https://www.irisxai.in/download/mobile)
 
-*License activation is tied to your account and grants full access to native voice execution, background overlay permissions, and real-time screen streaming.*
+_License activation is tied to your account and grants full access to native voice execution, background overlay permissions, and real-time screen streaming._
 
 ---
 
 # 🚀 Download & Setup
 
 ### 📲 For Mobile App Users
+
 1. Download the official release APK directly from: [https://www.irisxai.in/download/mobile](https://www.irisxai.in/download/mobile)
 2. Install the APK on your Android device.
 3. Open IRIS-MX, sign in, and grant the required **Microphone** and **Display Over Other Apps** permissions.
 4. Enter your Gemini API Key in Settings and tap **Start AI**!
 
 ### 💻 For Developers (UI Shell)
+
 To run and inspect the public frontend shell locally:
 
 ```bash
@@ -172,19 +179,252 @@ npm run start
 
 # 📁 Project Structure
 
+# Project Structure
+
 ```
-IRIS-MX / IRIS-X
-├── assets/                  # App branding, icons, and splash screens
-├── modules/                 # Native C++/Kotlin custom modules (Screen capture & PCM audio)
-├── src/
-│   ├── app/                 # Expo Router page navigation (index, login, upgrade)
-│   ├── components/          # Glassmorphic UI components (IrisDock, RequiredPermissionsModal, UpdatePopup)
-│   ├── logic/               # Overlay permission hooks and system intents
-│   ├── services/            # AudioInput, AudioOutput, WebSocketService, UpdateService, NotificationService
-│   ├── store/               # Zustand state stores (authStore)
-│   └── tools/               # Mobile tool definitions for Gemini Live API
-├── app.json                 # Expo configuration & native permissions
-└── update-manifest.json     # Automatic GitHub OTA update manifest
+IRIS-MX/
+├── assets
+│   ├── expo.icon
+│   │   ├── Assets
+│   │   │   ├── expo-symbol 2.svg
+│   │   │   └── grid.png
+│   │   └── icon.json
+│   ├── fonts
+│   │   ├── Antonio-Bold.ttf
+│   │   ├── Antonio-Medium.ttf
+│   │   ├── Antonio-Regular.ttf
+│   │   ├── Antonio-SemiBold.ttf
+│   │   ├── Outfit-ExtraLight.ttf
+│   │   ├── Outfit-Light.ttf
+│   │   ├── Outfit-Medium.ttf
+│   │   ├── Outfit-Regular.ttf
+│   │   ├── Outfit-SemiBold.ttf
+│   │   └── Outfit-Thin.ttf
+│   ├── icons
+│   │   ├── apps.png
+│   │   ├── home.png
+│   │   ├── notes.png
+│   │   └── profile.png
+│   └── images
+│       ├── android-icon-background.png
+│       ├── android-icon-foreground.png
+│       ├── android-icon-monochrome.png
+│       ├── favicon.ico
+│       ├── icon.png
+│       ├── splash-icon.png
+│       └── splashirs-icon.png
+├── back-up
+│   ├── (auth)
+│   │   └── login.tsx
+│   └── (tabs)
+│       ├── _layout.tsx
+│       ├── apps.tsx
+│       ├── notes.tsx
+│       └── settings.tsx
+├── modules
+│   ├── js
+│   │   └── rj.kt
+│   ├── pcm-stream-player
+│   │   ├── android
+│   │   │   ├── build
+│   │   │   │   ├── generated
+│   │   │   │   │   ├── ap_generated_sources
+│   │   │   │   │   ├── res
+│   │   │   │   │   └── source
+│   │   │   │   ├── intermediates
+│   │   │   │   │   ├── aapt_friendly_merged_manifests
+│   │   │   │   │   ├── aar_libs_directory
+│   │   │   │   │   ├── aar_main_jar
+│   │   │   │   │   ├── aar_metadata
+│   │   │   │   │   ├── annotation_processor_list
+│   │   │   │   │   ├── annotations_typedef_file
+│   │   │   │   │   ├── annotations_zip
+│   │   │   │   │   ├── assets
+│   │   │   │   │   ├── compile_library_classes_jar
+│   │   │   │   │   ├── compile_r_class_jar
+│   │   │   │   │   ├── compile_symbol_list
+│   │   │   │   │   ├── compiled_local_resources
+│   │   │   │   │   ├── data_binding_layout_info_type_package
+│   │   │   │   │   ├── generated_proguard_file
+│   │   │   │   │   ├── incremental
+│   │   │   │   │   ├── java_res
+│   │   │   │   │   ├── javac
+│   │   │   │   │   ├── library_and_local_jars_jni
+│   │   │   │   │   ├── library_art_profile
+│   │   │   │   │   ├── library_jni
+│   │   │   │   │   ├── lint_publish_jar
+│   │   │   │   │   ├── local_only_symbol_list
+│   │   │   │   │   ├── manifest_merge_blame_file
+│   │   │   │   │   ├── merged_consumer_proguard_file
+│   │   │   │   │   ├── merged_java_res
+│   │   │   │   │   ├── merged_jni_libs
+│   │   │   │   │   ├── merged_manifest
+│   │   │   │   │   ├── merged_shaders
+│   │   │   │   │   ├── navigation_json
+│   │   │   │   │   ├── navigation_json_for_aar
+│   │   │   │   │   ├── nested_resources_validation_report
+│   │   │   │   │   ├── packaged_res
+│   │   │   │   │   ├── public_res
+│   │   │   │   │   ├── runtime_library_classes_jar
+│   │   │   │   │   ├── symbol_list_with_package_name
+│   │   │   │   │   └── tmp
+│   │   │   │   ├── kotlin
+│   │   │   │   │   └── compileDebugKotlin
+│   │   │   │   ├── outputs
+│   │   │   │   │   ├── aar
+│   │   │   │   │   └── logs
+│   │   │   │   └── tmp
+│   │   │   │       ├── compileDebugJavaWithJavac
+│   │   │   │       └── kotlin-classes
+│   │   │   ├── src
+│   │   │   │   └── main
+│   │   │   │       └── java
+│   │   │   └── build.gradle
+│   │   ├── expo-module.config.json
+│   │   ├── index.ts
+│   │   └── package.json
+│   └── screen-capture
+│       ├── android
+│       │   ├── build
+│       │   │   ├── generated
+│       │   │   │   ├── ap_generated_sources
+│       │   │   │   ├── res
+│       │   │   │   └── source
+│       │   │   ├── intermediates
+│       │   │   │   ├── aapt_friendly_merged_manifests
+│       │   │   │   ├── aar_libs_directory
+│       │   │   │   ├── aar_main_jar
+│       │   │   │   ├── aar_metadata
+│       │   │   │   ├── annotation_processor_list
+│       │   │   │   ├── annotations_typedef_file
+│       │   │   │   ├── annotations_zip
+│       │   │   │   ├── assets
+│       │   │   │   ├── compile_library_classes_jar
+│       │   │   │   ├── compile_r_class_jar
+│       │   │   │   ├── compile_symbol_list
+│       │   │   │   ├── compiled_local_resources
+│       │   │   │   ├── data_binding_layout_info_type_package
+│       │   │   │   ├── generated_proguard_file
+│       │   │   │   ├── incremental
+│       │   │   │   ├── java_res
+│       │   │   │   ├── javac
+│       │   │   │   ├── library_and_local_jars_jni
+│       │   │   │   ├── library_art_profile
+│       │   │   │   ├── library_jni
+│       │   │   │   ├── lint_publish_jar
+│       │   │   │   ├── local_only_symbol_list
+│       │   │   │   ├── manifest_merge_blame_file
+│       │   │   │   ├── merged_consumer_proguard_file
+│       │   │   │   ├── merged_java_res
+│       │   │   │   ├── merged_jni_libs
+│       │   │   │   ├── merged_manifest
+│       │   │   │   ├── merged_shaders
+│       │   │   │   ├── navigation_json
+│       │   │   │   ├── navigation_json_for_aar
+│       │   │   │   ├── nested_resources_validation_report
+│       │   │   │   ├── packaged_res
+│       │   │   │   ├── public_res
+│       │   │   │   ├── runtime_library_classes_jar
+│       │   │   │   └── symbol_list_with_package_name
+│       │   │   ├── kotlin
+│       │   │   │   └── compileDebugKotlin
+│       │   │   ├── outputs
+│       │   │   │   ├── aar
+│       │   │   │   └── logs
+│       │   │   └── tmp
+│       │   │       ├── compileDebugJavaWithJavac
+│       │   │       └── kotlin-classes
+│       │   ├── src
+│       │   │   └── main
+│       │   │       ├── java
+│       │   │       └── AndroidManifest.xml
+│       │   └── build.gradle
+│       ├── expo-module.config.json
+│       ├── index.ts
+│       └── package.json
+├── src
+│   ├── agent
+│   │   └── search-agent.ts
+│   ├── app
+│   │   ├── login
+│   │   │   ├── _layout.tsx
+│   │   │   ├── index.tsx
+│   │   │   └── legal.tsx
+│   │   ├── settings
+│   │   │   ├── _layout.tsx
+│   │   │   └── index.tsx
+│   │   ├── _layout.tsx
+│   │   ├── dashboard.tsx
+│   │   ├── index.tsx
+│   │   └── upgrade.tsx
+│   ├── components
+│   │   ├── IrisDock.tsx
+│   │   ├── IrisErrorModal.tsx
+│   │   ├── IrisHeader.tsx
+│   │   ├── IrisTranscript.tsx
+│   │   ├── IRISVoice.tsx
+│   │   ├── ProRequiredModal.tsx
+│   │   ├── RequiredPermissionsModal.tsx
+│   │   ├── TamperedAppModal.tsx
+│   │   └── UpdatePopup.tsx
+│   ├── config
+│   │   └── AxiosInstance.ts
+│   ├── constants
+│   │   ├── data.ts
+│   │   ├── icons.ts
+│   │   └── theme.ts
+│   ├── hooks
+│   │   ├── use-color-scheme.ts
+│   │   ├── use-color-scheme.web.ts
+│   │   └── use-theme.ts
+│   ├── logic
+│   │   ├── app-control.ts
+│   │   ├── calendar-agent.ts
+│   │   ├── clipboard-agent.ts
+│   │   ├── clock-agent.ts
+│   │   ├── contacts-agent.ts
+│   │   ├── device.ts
+│   │   ├── hardware.ts
+│   │   ├── intents.ts
+│   │   ├── memory-agent.ts
+│   │   └── overlay-permission.ts
+│   ├── services
+│   │   ├── ApiKeyService.ts
+│   │   ├── AudioInputService.ts
+│   │   ├── AudioOutputService.ts
+│   │   ├── NotificationService.ts
+│   │   ├── PermissionsService.ts
+│   │   ├── UpdateService.ts
+│   │   ├── WebRTCAudioService.js
+│   │   └── WebSocketService.ts
+│   ├── store
+│   │   └── authStore.ts
+│   ├── tools
+│   │   └── tools.ts
+│   └── utils
+│       └── crypto-verify.ts
+├── types
+│   └── images.d.ts
+├── AGENTS.md
+├── app.json
+├── CLAUDE.md
+├── CODE_OF_CONDUCT.md
+├── config.ts
+├── CONTRIBUTING.md
+├── eas.json
+├── global.css
+├── LICENSE
+├── metro.config.js
+├── nativewind-env.d.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── README.md
+├── SECURITY.md
+├── tsconfig.json
+├── type.d.ts
+├── update-manifest.json
+└── user_req.txt
 ```
 
 ---
