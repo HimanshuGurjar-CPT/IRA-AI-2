@@ -1,292 +1,238 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=1aff6e&height=200&section=header&text=IRIS-MX&fontSize=80&fontColor=ffffff&fontAlignY=38&desc=Agentic%20Mobile%20OS%20for%20Android&descAlignY=60&descSize=18&descColor=a0ffc0" width="100%"/>
+# 👁️ IRIS-MX — Mobile AI Assistant
 
-<br/>
+### Voice-First Mobile AI Execution System
 
-[![Platform](https://img.shields.io/badge/Platform-Android-1aff6e?style=for-the-badge&logo=android&logoColor=white&labelColor=050a05)](https://android.com)
-[![Built With](https://img.shields.io/badge/Built%20With-React%20Native%20%2B%20Expo-1aff6e?style=for-the-badge&logo=expo&logoColor=white&labelColor=050a05)](https://expo.dev)
-[![AI Engine](https://img.shields.io/badge/AI%20Engine-Gemini%202.5%20Flash-1aff6e?style=for-the-badge&logo=google&logoColor=white&labelColor=050a05)](https://deepmind.google/technologies/gemini/)
-[![License](https://img.shields.io/badge/License-Proprietary-1aff6e?style=for-the-badge&logoColor=white&labelColor=050a05)](./LICENSE)
-[![Status](https://img.shields.io/badge/Status-In%20Development-1aff6e?style=for-the-badge&labelColor=050a05)](https://github.com/201Harsh/IRIS-MX)
+**Speak naturally. Control your Mobile Device. Automate Workflows on Android with Voice Commands.**
 
-<br/>
+---
 
-> **IRIS-MX is not an app. It is a neural extension of your Android device.**
->
-> Speak. It executes. No taps. No menus. Just intent.
+<div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 20px;">
 
-<br/>
+  <a href="https://github.com/IRISX-AI/IRIS-X/stargazers">
+    <img src="https://badgen.net/github/stars/IRISX-AI/IRIS-X?color=ff6600&icon=github" alt="GitHub stars">
+  </a>
+
+  <a href="https://github.com/IRISX-AI/IRIS-X/network/members">
+    <img src="https://badgen.net/github/forks/IRISX-AI/IRIS-X?color=ff6600&icon=github" alt="GitHub forks">
+  </a>
+
+  <a href="https://github.com/IRISX-AI/IRIS-X/graphs/contributors">
+    <img src="https://badgen.net/github/contributors/IRISX-AI/IRIS-X?color=ff6600&icon=github" alt="Contributors">
+  </a>
+
+  <a href="https://www.irisxai.in/download/mobile">
+    <img src="https://badgen.net/badge/Download/Mobile%20APK/ff6600?icon=android" alt="Download Mobile APK">
+  </a>
+
+  <a href="https://www.irisxai.in/pricing/iris-mx">
+    <img src="https://badgen.net/badge/License/Mobile%20PRO/10b981" alt="Mobile PRO License">
+  </a>
+
+</div>
+
+**Speak your command. IRIS-MX executes it directly on your phone.**
+
+A voice-first mobile execution assistant powered by **Gemini 3.1 Live API** with real-time bidirectional audio, floating system overlays, native app intents, and hardware automation.
 
 ---
 
 </div>
 
-## What is IRIS-MX?
+# 📑 Table of Contents
 
-IRIS-MX is the mobile evolution of the [IRIS AI Desktop OS](https://github.com/201Harsh/IRIS-AI). Where IRIS gave you an agentic layer over Windows, IRIS-MX does the same for Android — but goes further. It physically controls your device, reads your notifications, runs background automations while the screen is off, and communicates through a zero-latency full-duplex voice interface powered by Gemini Live.
+- [⚡ Overview](#-overview)
+- [🎯 What is Voice-First Mobile?](#-what-is-voice-first-mobile)
+- [✨ Core Mobile Capabilities](#-core-mobile-capabilities)
+- [🪡 Open Core Model & Code Protection](#-open-core-model--code-protection)
+- [💰 Pricing & Licensing](#-pricing--licensing)
+- [🚀 Download & Setup](#-download--setup)
+- [📁 Project Structure](#-project-structure)
+- [🤝 Contributing](#-contributing)
+- [🔒 Security & Privacy](#-security--privacy)
+- [👨‍💻 Architect & Contact](#-architect--contact)
+- [📜 License](#-license)
 
-It is a closed-source, subscription-based product built for people who want their phone to work **for** them — not the other way around.
+---
+
+# ⚡ Overview
+
+IRIS-MX is not a basic chatbot.
+
+It is a **Voice-First Mobile AI Assistant** built on the powerful IRIS-AI Voice Engine. It listens to your spoken commands in real-time and executes real actions directly across your phone—opening apps, playing music, sending WhatsApp messages, making calls, controlling hardware settings, and managing device tasks.
+
+> **Speak naturally. IRIS-MX understands intent. Actions happen live on your mobile device.**
+
+---
+
+# 🎯 What is Voice-First Mobile?
+
+Traditional phone apps force you to unlock your screen, find an icon, tap buttons, and type text.
+
+IRIS-MX changes that completely: **You speak → IRIS hears you in real time → Actions execute on your phone.**
 
 ```
-User:  "Hey IRIS, I'm heading to the office."
+Your Spoken Voice
+    ↓ (Bidirectional Real-Time PCM Stream)
+Gemini 3.1 Live API
+    ↓ (Intent & Action Recognition)
+IRIS Mobile Execution Engine
+    ↓ (Native Intents & Hardware APIs)
+WhatsApp / Spotify / Calls / Settings / Camera / Overlays
+```
 
-IRIS:  Silencing phone... ✓
-       Opening Notion... ✓
-       Pulling your 9am calendar brief... ✓
-       Done. You have 3 meetings today. First one in 22 minutes.
+- **Latency:** Sub-second zero-latency bidirectional voice streams.
+- **Background Resilient:** Runs via floating system overlays and background service loops.
+- **Multimodal Screen Streaming:** Real-time screen capture streaming directly to the AI for visual context.
+
+---
+
+# ✨ Core Mobile Capabilities
+
+### 💬 WhatsApp & Direct Communication
+- **Send WhatsApp Messages:** Compose and launch direct WhatsApp messages to any contact by name.
+  - *Commands:* "Send a WhatsApp message to Sidhu saying I'm on my way", "Message Mom on WhatsApp"
+- **Phone Calls & SMS:** Search device contacts and trigger calls or text messages instantly.
+  - *Commands:* "Call Alex", "Send an SMS to Rahul saying call me back"
+
+### 🎵 Deep Link App Launching & Media Controls
+- **YouTube Playback:** Search and play any song or video on YouTube instantly.
+  - *Commands:* "Play Believer on YouTube", "Open YouTube and search podcast"
+- **Spotify Streaming:** Trigger native Spotify music streaming for songs, artists, or playlists.
+  - *Commands:* "Play synthwave on Spotify", "Resume Spotify music"
+- **Open Any App:** Launch any native mobile application installed on your device.
+  - *Commands:* "Open Settings", "Launch Instagram", "Open Chrome"
+
+### ⚡ Hardware & System Controls
+- **Flashlight Control:** Instantly toggle your device's LED flashlight on or off.
+  - *Commands:* "Turn on flashlight", "Turn off flashlight"
+- **System Settings Teleport:** Direct navigation to Wi-Fi, Bluetooth, Location, and Hotspot control panels.
+  - *Commands:* "Open Wi-Fi settings", "Turn on Bluetooth settings"
+
+### 📅 Calendar & Memory Management
+- **Calendar Scheduling:** Check upcoming events and create new meetings in your device calendar.
+  - *Commands:* "What's on my calendar for today?", "Schedule a meeting for tomorrow at 3 PM"
+- **Persistent AI Memory:** Remember important user facts, preferences, and notes across sessions.
+  - *Commands:* "Remember my car parking spot is level 2", "What is my car parking spot?"
+
+### 👁️ Multimodal Screen Vision & Floating Overlay
+- **Real-Time Screen Capture:** Stream your live mobile screen directly to IRIS to ask questions about anything displayed.
+  - *Commands:* "Look at my screen and summarize this article", "What code error is showing on screen?"
+- **Floating System Dock:** A glassmorphic quick-dock allowing instant voice mute, screen vision toggle, and status monitoring.
+
+---
+
+# 🪡 Open Core Model & Code Protection
+
+IRIS-MX is built on an **Open Core commercial model**:
+
+- **Public Repository ([IRIS-X](https://github.com/IRISX-AI/IRIS-X))**: Contains the user interface shell, navigation layout, theme system, and community integration examples.
+- **Private Production Core**: The core native voice execution engine, low-latency PCM audio stream pipelines, and proprietary background automation logic are protected and private.
+
+> 🔒 **IRIS-MX is a paid software.** The public repository allows developers to inspect the UI shell, but full AI execution requires an active **Mobile PRO License**.
+
+---
+
+# 💰 Pricing & Licensing
+
+To use the full IRIS-MX Mobile AI Voice Assistant, you must activate a **Mobile PRO License**.
+
+- 💳 **Purchase Mobile PRO License:** [https://www.irisxai.in/pricing/iris-mx](https://www.irisxai.in/pricing/iris-mx)
+- 📲 **Download Official Mobile APK:** [https://www.irisxai.in/download/mobile](https://www.irisxai.in/download/mobile)
+
+*License activation is tied to your account and grants full access to native voice execution, background overlay permissions, and real-time screen streaming.*
+
+---
+
+# 🚀 Download & Setup
+
+### 📲 For Mobile App Users
+1. Download the official release APK directly from: [https://www.irisxai.in/download/mobile](https://www.irisxai.in/download/mobile)
+2. Install the APK on your Android device.
+3. Open IRIS-MX, sign in, and grant the required **Microphone** and **Display Over Other Apps** permissions.
+4. Enter your Gemini API Key in Settings and tap **Start AI**!
+
+### 💻 For Developers (UI Shell)
+To run and inspect the public frontend shell locally:
+
+```bash
+# 1. Clone the public repository
+git clone https://github.com/IRISX-AI/IRIS-X.git
+cd IRIS-X
+
+# 2. Install dependencies
+npm install
+
+# 3. Start Expo development server
+npm run start
 ```
 
 ---
 
-## Architecture
+# 📁 Project Structure
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                    CLIENT — React Native (Expo)          │
-│  ┌──────────────┐ ┌──────────────┐ ┌──────────────────┐ │
-│  │  Voice Core  │ │  OS Control  │ │ Background Tasks │ │
-│  │  Wake word   │ │  Intents &   │ │  Cron jobs &     │ │
-│  │  STT / TTS   │ │  A11y APIs   │ │  Geofence watch  │ │
-│  └──────────────┘ └──────────────┘ └──────────────────┘ │
-└───────────────────────┬─────────────────────────────────┘
-                        │ HTTPS + JWT
-┌───────────────────────▼─────────────────────────────────┐
-│              MIDDLEWARE — Express.js on Vercel            │
-│   Auth Validator → Bandwidth Guard → API Key Injector    │
-└───────────┬──────────────────────────┬───────────────────┘
-            │                          │
-┌───────────▼──────────┐  ┌────────────▼────────────────┐
-│   NEURAL ENGINE       │  │   DATABASE — Supabase        │
-│   Gemini 2.5 Flash    │  │   users + subscriptions      │
-│   Gemini Live API     │  │   daily_usage (quota)        │
-└───────────────────────┘  └─────────────────────────────┘
-
-         ┌─────────────────────────────────────┐
-         │      EDGE — On-Device (Zero Cost)    │
-         │  Native TTS · Wake word · Geofence  │
-         └─────────────────────────────────────┘
+IRIS-MX / IRIS-X
+├── assets/                  # App branding, icons, and splash screens
+├── modules/                 # Native C++/Kotlin custom modules (Screen capture & PCM audio)
+├── src/
+│   ├── app/                 # Expo Router page navigation (index, login, upgrade)
+│   ├── components/          # Glassmorphic UI components (IrisDock, RequiredPermissionsModal, UpdatePopup)
+│   ├── logic/               # Overlay permission hooks and system intents
+│   ├── services/            # AudioInput, AudioOutput, WebSocketService, UpdateService, NotificationService
+│   ├── store/               # Zustand state stores (authStore)
+│   └── tools/               # Mobile tool definitions for Gemini Live API
+├── app.json                 # Expo configuration & native permissions
+└── update-manifest.json     # Automatic GitHub OTA update manifest
 ```
 
 ---
 
-## Core Features
+# 🤝 Contributing
 
-### 🎙️ Zero-Latency Neural Voice
+We welcome UI improvements, bug fixes, and community contributions to the frontend shell!
 
-Powered by the **Gemini Live WebRTC API** — real-time, full-duplex voice that lets you interrupt mid-sentence. No loading spinners. No waiting. The conversation flows like talking to a person.
-
-- Always-on wake word detection (`Hey IRIS`) running fully on-device
-- Custom voice shortcuts mapped to full action sequences
-- Whisper mode — detects quiet speech and adjusts TTS volume automatically
-- Native TTS for all responses (zero Gemini audio cost)
+1. Fork the repository [IRISX-AI/IRIS-X](https://github.com/IRISX-AI/IRIS-X).
+2. Create your feature branch (`git checkout -b feat/my-new-widget`).
+3. Commit your changes (`git commit -m "Add new UI component"`).
+4. Push to the branch and open a Pull Request.
 
 ---
 
-### 📱 Deep Android Control
+# 🔒 Security & Privacy
 
-IRIS-MX has full dominion over the Android ecosystem via Intents and Accessibility Services.
-
-| Capability             | What it does                                          |
-| ---------------------- | ----------------------------------------------------- |
-| App lifecycle          | Open, close, switch any app by voice                  |
-| Notification commander | Read, reply, dismiss notifications hands-free         |
-| Hardware control       | Brightness, volume, flashlight, Wi-Fi, Bluetooth, DND |
-| App locker             | Lock any app behind biometric or PIN via voice        |
-| Clipboard intelligence | Monitors clipboard, auto-suggests actions             |
+- **100% Bring-Your-Own-Key (BYOK):** Your Gemini API Key is stored encrypted in your device's secure local storage and never leaves your device.
+- **Biometric & Permission Control:** System overlays and microphone access are explicitly requested and can be toggled anytime.
+- **Zero Data Logging:** No audio streams or conversation logs are recorded or sold.
 
 ---
 
-### ⚡ Automation Flows
+# 👨‍💻 Architect & Contact
 
-A visual no-code trigger-action builder. Build sequences like:
+**Harsh Pandey**  
+Founder & AI Systems Architect, IRISX-AI
 
-```
-IF  battery < 20%
-→   enable low power mode
-→   send WhatsApp to Mom: "my phone is dying"
-```
-
-```
-IF  I arrive at [office location]
-→   silence phone
-→   open Notion
-→   read today's calendar brief aloud
-```
-
-Flows run entirely in the background. You build them once, IRIS-MX runs them forever.
+- 🌐 **Website:** [https://www.irisxai.in](https://www.irisxai.in)
+- 📧 **Source Code & Enterprise Inquiries:** `irisaidevop@gmail.com`
+- 🎬 **Instagram:** [@irisx.ai](https://www.instagram.com/irisx.ai)
+- 💻 **GitHub:** [@201Harsh](https://github.com/201Harsh) | [@IRISX-AI](https://github.com/IRISX-AI)
 
 ---
 
-### 🌅 Morning Neural Briefing
+# 📜 License
 
-Every morning at your chosen time, IRIS-MX auto-runs a full briefing — spoken aloud:
+The UI Shell in this repository is licensed under the **MIT License**.  
+The core IRIS-MX native voice engine and agent execution logic are proprietary software subject to the **IRIS-MX Commercial License**.
 
-- Today's weather
-- Calendar events for the day
-- Unread priority notifications
-- Your saved notes and tasks
-
-Built using cheap text API calls + native TTS. Cost to you: near zero.
+See [LICENSE](LICENSE) for full details.
 
 ---
-
-### 🔐 Security Vault
-
-- **Face App Locker** — lock any app behind facial recognition
-- **Intruder Selfie** — wrong PIN triggers a silent front-camera photo + alert to you
-- **Privacy Screen** — detects shoulder surfers via front camera and blurs the display
-
----
-
-### 📍 Context-Aware Intelligence
-
-- **GPS Geofencing** — trigger automation flows based on location zones
-- **Calendar Consciousness** — reads your calendar and auto-preps context before meetings
-- **Smart Reminders** — context-based, not just time-based: _"remind me when I open WhatsApp"_
-
----
-
-## Tech Stack
-
-| Layer               | Technology                                    |
-| ------------------- | --------------------------------------------- |
-| Mobile client       | React Native (Expo) + NativeWind              |
-| OS control          | Android Intents + Accessibility Services      |
-| Background jobs     | `expo-task-manager` + `expo-background-fetch` |
-| Voice (STT)         | `react-native-voice`                          |
-| Voice (TTS)         | Native Android TTS engine (free)              |
-| Wake word           | On-device detection                           |
-| Vision              | `expo-camera` + Gemini multimodal             |
-| Location            | `expo-location` + geofencing                  |
-| Security middleware | Express.js on Vercel                          |
-| Neural engine       | Google Gemini 2.5 Flash + Live API            |
-| Database & Auth     | Supabase (PostgreSQL)                         |
-| Payments            | Stripe + UPI gateway                          |
-
----
-
-## Monetization — Neural Bandwidth System
-
-IRIS-MX is a **subscription-first** product designed for profitability from day one.
-
-```
-₹399 – ₹499 / month
-```
-
-To protect margins against API costs, every user receives a daily **Neural Bandwidth** allocation — a cap on voice minutes and command volume per day. The Vercel middleware enforces this on every request before the Gemini key is injected.
-
-**Why this works:**
-
-- Average user won't hit the cap in normal daily usage
-- Power users who want more become upsell targets
-- Server costs stay near zero using the edge architecture below
-
-**Cost-saving edge architecture:**
-
-- Background briefings fetch cheap text from Gemini (`$4.50 / 1M tokens`)
-- Audio is rendered locally using the phone's native TTS engine (completely free)
-- Gemini Live audio output (`$0.018/min`) is used only for real-time conversation
-
----
-
-## Subscription Tiers
-
-| Feature                 | Free Preview | IRIS-MX Pro (₹399/mo) |
-| ----------------------- | ------------ | --------------------- |
-| Basic voice commands    | ✓            | ✓                     |
-| Manual app control      | ✓            | ✓                     |
-| 10 commands/day         | ✓            | —                     |
-| Full Neural Bandwidth   | —            | ✓                     |
-| Wake word always-on     | —            | ✓                     |
-| Background automation   | —            | ✓                     |
-| Automation flow builder | —            | ✓                     |
-| Notification commander  | —            | ✓                     |
-| Morning briefing        | —            | ✓                     |
-| Intruder Selfie         | —            | ✓                     |
-| Geofence triggers       | —            | ✓                     |
-| Priority support        | —            | ✓                     |
-
----
-
-## Security
-
-IRIS-MX is built around a zero-trust architecture. Your API keys are never stored on-device or exposed in the client bundle.
-
-```
-Client  →  sends JWT token + prompt text
-           (no API keys ever leave the server)
-
-Middleware  →  validates subscription
-            →  checks daily quota
-            →  injects Gemini key server-side
-            →  forwards to Gemini
-
-Gemini  →  returns response
-        →  middleware strips key before forwarding
-        →  client receives clean response
-```
-
-All authentication is handled via Supabase with Row Level Security enforced at the database layer.
-
----
-
-## Roadmap
-
-- [x] Core architecture designed
-- [x] UI design system (dark neon green theme)
-- [ ] Voice core — wake word + STT integration
-- [ ] Gemini Live WebRTC streaming
-- [ ] Middleware — auth + bandwidth guard on Vercel
-- [ ] Supabase schema — users, subscriptions, daily_usage
-- [ ] Android Intents — app control layer
-- [ ] Accessibility Services — notification reader
-- [ ] Automation flow builder UI
-- [ ] Geofence trigger system
-- [ ] Morning briefing background worker
-- [ ] Security vault — face locker + intruder selfie
-- [ ] Stripe + UPI payment integration
-- [ ] Beta launch (closed)
-- [ ] Public launch on Play Store
-
----
-
-## The IRIS Ecosystem
-
-IRIS-MX is part of a broader ecosystem:
-
-| Product                                        | Platform        | Status                |
-| ---------------------------------------------- | --------------- | --------------------- |
-| [IRIS AI](https://github.com/201Harsh/IRIS-AI) | Windows Desktop | ✅ Live — Open Source |
-| IRIS-MX                                        | Android Mobile  | 🔨 In Development     |
-| IRIS Cloud                                     | Web             | 🔮 Planned            |
-
----
-
-## About the Architect
-
-**Harsh Pandey** — AI Systems Engineer
-
-Building agentic OS layers that turn intent into real-world execution. IRIS Desktop crossed 5,000 Instagram followers and 70 GitHub stars in 3 months. IRIS-MX is the next chapter.
-
-[![Instagram](https://img.shields.io/badge/@201Harshs-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/201Harshs)
-[![GitHub](https://img.shields.io/badge/@201Harsh-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/201Harsh)
-
----
-
-## License
-
-IRIS-MX is proprietary software. All rights reserved.
-
-The source code is not open for distribution, modification, or reuse without explicit written permission from the author.
-
-> IRIS-MX is not an app. It is a neural extension of your Android device.
->
-> **System initializing.**
 
 <div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=1aff6e&height=120&section=footer&fontColor=ffffff" width="100%"/>
 
-_Made with intent by Harsh Pandey_
+**System Online. IRIS-MX Activated.**
+
+Made with ❤️ by [Harsh Pandey](https://instagram.com/201Harshs)
 
 </div>
