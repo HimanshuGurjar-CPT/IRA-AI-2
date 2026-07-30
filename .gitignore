@@ -38,8 +38,6 @@ yarn-error.*
 app-example
 
 # generated native folders
-/ios
-/android
 builds
 
 # .gitignore in Public Repo
