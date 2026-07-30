@@ -1,6 +1,6 @@
 <div align="center">
 
-# 👁️ IRIS-MX — Mobile AI Assistant
+![IRIS-MX Mobile AI Assistant](./assets/banner.png)
 
 ### Voice-First Mobile AI Execution System
 
@@ -181,14 +181,21 @@ npm run start
 
 # Project Structure
 
+# Project Structure
+
 ```
-IRIS-MX/
+IRIS-X/
+├── app
+│   ├── (auth)
+│   │   └── login.tsx
+│   ├── (tabs)
+│   │   ├── _layout.tsx
+│   │   ├── apps.tsx
+│   │   ├── index.tsx
+│   │   ├── notes.tsx
+│   │   └── settings.tsx
+│   └── _layout.tsx
 ├── assets
-│   ├── expo.icon
-│   │   ├── Assets
-│   │   │   ├── expo-symbol 2.svg
-│   │   │   └── grid.png
-│   │   └── icon.json
 │   ├── fonts
 │   │   ├── Antonio-Bold.ttf
 │   │   ├── Antonio-Medium.ttf
@@ -203,215 +210,37 @@ IRIS-MX/
 │   ├── icons
 │   │   ├── apps.png
 │   │   ├── home.png
+│   │   ├── iris-x.svg
 │   │   ├── notes.png
 │   │   └── profile.png
-│   └── images
-│       ├── android-icon-background.png
-│       ├── android-icon-foreground.png
-│       ├── android-icon-monochrome.png
-│       ├── favicon.ico
-│       ├── icon.png
-│       ├── splash-icon.png
-│       └── splashirs-icon.png
-├── back-up
-│   ├── (auth)
-│   │   └── login.tsx
-│   └── (tabs)
-│       ├── _layout.tsx
-│       ├── apps.tsx
-│       ├── notes.tsx
-│       └── settings.tsx
-├── modules
-│   ├── js
-│   │   └── rj.kt
-│   ├── pcm-stream-player
-│   │   ├── android
-│   │   │   ├── build
-│   │   │   │   ├── generated
-│   │   │   │   │   ├── ap_generated_sources
-│   │   │   │   │   ├── res
-│   │   │   │   │   └── source
-│   │   │   │   ├── intermediates
-│   │   │   │   │   ├── aapt_friendly_merged_manifests
-│   │   │   │   │   ├── aar_libs_directory
-│   │   │   │   │   ├── aar_main_jar
-│   │   │   │   │   ├── aar_metadata
-│   │   │   │   │   ├── annotation_processor_list
-│   │   │   │   │   ├── annotations_typedef_file
-│   │   │   │   │   ├── annotations_zip
-│   │   │   │   │   ├── assets
-│   │   │   │   │   ├── compile_library_classes_jar
-│   │   │   │   │   ├── compile_r_class_jar
-│   │   │   │   │   ├── compile_symbol_list
-│   │   │   │   │   ├── compiled_local_resources
-│   │   │   │   │   ├── data_binding_layout_info_type_package
-│   │   │   │   │   ├── generated_proguard_file
-│   │   │   │   │   ├── incremental
-│   │   │   │   │   ├── java_res
-│   │   │   │   │   ├── javac
-│   │   │   │   │   ├── library_and_local_jars_jni
-│   │   │   │   │   ├── library_art_profile
-│   │   │   │   │   ├── library_jni
-│   │   │   │   │   ├── lint_publish_jar
-│   │   │   │   │   ├── local_only_symbol_list
-│   │   │   │   │   ├── manifest_merge_blame_file
-│   │   │   │   │   ├── merged_consumer_proguard_file
-│   │   │   │   │   ├── merged_java_res
-│   │   │   │   │   ├── merged_jni_libs
-│   │   │   │   │   ├── merged_manifest
-│   │   │   │   │   ├── merged_shaders
-│   │   │   │   │   ├── navigation_json
-│   │   │   │   │   ├── navigation_json_for_aar
-│   │   │   │   │   ├── nested_resources_validation_report
-│   │   │   │   │   ├── packaged_res
-│   │   │   │   │   ├── public_res
-│   │   │   │   │   ├── runtime_library_classes_jar
-│   │   │   │   │   ├── symbol_list_with_package_name
-│   │   │   │   │   └── tmp
-│   │   │   │   ├── kotlin
-│   │   │   │   │   └── compileDebugKotlin
-│   │   │   │   ├── outputs
-│   │   │   │   │   ├── aar
-│   │   │   │   │   └── logs
-│   │   │   │   └── tmp
-│   │   │   │       ├── compileDebugJavaWithJavac
-│   │   │   │       └── kotlin-classes
-│   │   │   ├── src
-│   │   │   │   └── main
-│   │   │   │       └── java
-│   │   │   └── build.gradle
-│   │   ├── expo-module.config.json
-│   │   ├── index.ts
-│   │   └── package.json
-│   └── screen-capture
-│       ├── android
-│       │   ├── build
-│       │   │   ├── generated
-│       │   │   │   ├── ap_generated_sources
-│       │   │   │   ├── res
-│       │   │   │   └── source
-│       │   │   ├── intermediates
-│       │   │   │   ├── aapt_friendly_merged_manifests
-│       │   │   │   ├── aar_libs_directory
-│       │   │   │   ├── aar_main_jar
-│       │   │   │   ├── aar_metadata
-│       │   │   │   ├── annotation_processor_list
-│       │   │   │   ├── annotations_typedef_file
-│       │   │   │   ├── annotations_zip
-│       │   │   │   ├── assets
-│       │   │   │   ├── compile_library_classes_jar
-│       │   │   │   ├── compile_r_class_jar
-│       │   │   │   ├── compile_symbol_list
-│       │   │   │   ├── compiled_local_resources
-│       │   │   │   ├── data_binding_layout_info_type_package
-│       │   │   │   ├── generated_proguard_file
-│       │   │   │   ├── incremental
-│       │   │   │   ├── java_res
-│       │   │   │   ├── javac
-│       │   │   │   ├── library_and_local_jars_jni
-│       │   │   │   ├── library_art_profile
-│       │   │   │   ├── library_jni
-│       │   │   │   ├── lint_publish_jar
-│       │   │   │   ├── local_only_symbol_list
-│       │   │   │   ├── manifest_merge_blame_file
-│       │   │   │   ├── merged_consumer_proguard_file
-│       │   │   │   ├── merged_java_res
-│       │   │   │   ├── merged_jni_libs
-│       │   │   │   ├── merged_manifest
-│       │   │   │   ├── merged_shaders
-│       │   │   │   ├── navigation_json
-│       │   │   │   ├── navigation_json_for_aar
-│       │   │   │   ├── nested_resources_validation_report
-│       │   │   │   ├── packaged_res
-│       │   │   │   ├── public_res
-│       │   │   │   ├── runtime_library_classes_jar
-│       │   │   │   └── symbol_list_with_package_name
-│       │   │   ├── kotlin
-│       │   │   │   └── compileDebugKotlin
-│       │   │   ├── outputs
-│       │   │   │   ├── aar
-│       │   │   │   └── logs
-│       │   │   └── tmp
-│       │   │       ├── compileDebugJavaWithJavac
-│       │   │       └── kotlin-classes
-│       │   ├── src
-│       │   │   └── main
-│       │   │       ├── java
-│       │   │       └── AndroidManifest.xml
-│       │   └── build.gradle
-│       ├── expo-module.config.json
-│       ├── index.ts
-│       └── package.json
-├── src
-│   ├── agent
-│   │   └── search-agent.ts
-│   ├── app
-│   │   ├── login
-│   │   │   ├── _layout.tsx
-│   │   │   ├── index.tsx
-│   │   │   └── legal.tsx
-│   │   ├── settings
-│   │   │   ├── _layout.tsx
-│   │   │   └── index.tsx
-│   │   ├── _layout.tsx
-│   │   ├── dashboard.tsx
-│   │   ├── index.tsx
-│   │   └── upgrade.tsx
-│   ├── components
-│   │   ├── IrisDock.tsx
-│   │   ├── IrisErrorModal.tsx
-│   │   ├── IrisHeader.tsx
-│   │   ├── IrisTranscript.tsx
-│   │   ├── IRISVoice.tsx
-│   │   ├── ProRequiredModal.tsx
-│   │   ├── RequiredPermissionsModal.tsx
-│   │   ├── TamperedAppModal.tsx
-│   │   └── UpdatePopup.tsx
-│   ├── config
-│   │   └── AxiosInstance.ts
-│   ├── constants
-│   │   ├── data.ts
-│   │   ├── icons.ts
-│   │   └── theme.ts
-│   ├── hooks
-│   │   ├── use-color-scheme.ts
-│   │   ├── use-color-scheme.web.ts
-│   │   └── use-theme.ts
-│   ├── logic
-│   │   ├── app-control.ts
-│   │   ├── calendar-agent.ts
-│   │   ├── clipboard-agent.ts
-│   │   ├── clock-agent.ts
-│   │   ├── contacts-agent.ts
-│   │   ├── device.ts
-│   │   ├── hardware.ts
-│   │   ├── intents.ts
-│   │   ├── memory-agent.ts
-│   │   └── overlay-permission.ts
-│   ├── services
-│   │   ├── ApiKeyService.ts
-│   │   ├── AudioInputService.ts
-│   │   ├── AudioOutputService.ts
-│   │   ├── NotificationService.ts
-│   │   ├── PermissionsService.ts
-│   │   ├── UpdateService.ts
-│   │   ├── WebRTCAudioService.js
-│   │   └── WebSocketService.ts
-│   ├── store
-│   │   └── authStore.ts
-│   ├── tools
-│   │   └── tools.ts
-│   └── utils
-│       └── crypto-verify.ts
+│   ├── images
+│   │   ├── android-icon-background.png
+│   │   ├── android-icon-foreground.png
+│   │   ├── android-icon-monochrome.png
+│   │   ├── favicon.png
+│   │   ├── icon.png
+│   │   ├── partial-react-logo.png
+│   │   ├── react-logo.png
+│   │   ├── react-logo@2x.png
+│   │   ├── react-logo@3x.png
+│   │   └── splash-icon.png
+│   ├── banner.png
+│   ├── logo.png
+│   └── logo2.png
+├── components
+│   ├── CommandCard.tsx
+│   ├── IrisHeader.tsx
+│   └── VoiceNode.tsx
+├── constants
+│   ├── data.ts
+│   ├── icons.ts
+│   └── theme.ts
 ├── types
 │   └── images.d.ts
-├── AGENTS.md
 ├── app.json
-├── CLAUDE.md
 ├── CODE_OF_CONDUCT.md
-├── config.ts
 ├── CONTRIBUTING.md
-├── eas.json
+├── eslint.config.js
 ├── global.css
 ├── LICENSE
 ├── metro.config.js
@@ -423,8 +252,7 @@ IRIS-MX/
 ├── SECURITY.md
 ├── tsconfig.json
 ├── type.d.ts
-├── update-manifest.json
-└── user_req.txt
+└── update-manifest.json
 ```
 
 ---
