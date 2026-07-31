@@ -48,4 +48,3 @@ builds
 *.keystore
 node_modules/
 .expo/
-
