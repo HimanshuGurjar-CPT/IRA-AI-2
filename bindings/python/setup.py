@@ -1,5 +1,12 @@
+import importlib.util
 from setuptools import setup, Extension
-import pybind11
+
+pybind11_spec = importlib.util.find_spec("pybind11")
+if pybind11_spec is not None:
+    import pybind11
+    pybind_include = pybind11.get_include()
+else:
+    pybind_include = "../../android/app/src/main/cpp"
 
 ext_modules = [
     Extension(
@@ -11,7 +18,7 @@ ext_modules = [
             "../../android/app/src/main/cpp/iris_conformer_encoder.cpp",
         ],
         include_dirs=[
-            pybind11.get_include(),
+            pybind_include,
             "../../android/app/src/main/cpp",
         ],
         language="c++",
@@ -24,5 +31,5 @@ setup(
     version="2.4.0",
     author="IRIS-MX AI Platform",
     description="Python C++ bindings for low-latency native engine",
-    ext_modules=ext_modules,
+    ext_modules=ext_modules if pybind11_spec is not None else [],
 )
