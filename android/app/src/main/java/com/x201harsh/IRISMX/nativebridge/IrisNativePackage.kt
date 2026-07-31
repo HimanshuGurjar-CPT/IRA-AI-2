@@ -14,7 +14,8 @@ class IrisNativePackage : ReactPackage {
     override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
         return listOf(
             IrisSpectrumViewManager(),
-            IrisStatusHUDViewManager()
+            IrisStatusHUDViewManager(),
+            IrisHolographicMatrixViewManager()
         )
     }
 }
