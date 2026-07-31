@@ -13,7 +13,12 @@ add_library(
     iris_vulkan_compute.cpp
     iris_audio_resampler.cpp
     iris_tensor_math.cpp
+    iris_conformer_encoder.cpp
+    iris_beam_search_decoder.cpp
+    iris_quantized_matmul.cpp
     raw_c_dsp.c
+    iris_fft_radix4.c
+    iris_filterbank.c
 )
 
 find_library(

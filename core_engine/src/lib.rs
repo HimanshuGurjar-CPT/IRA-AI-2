@@ -6,6 +6,11 @@ pub mod resampler;
 pub mod fft;
 pub mod nn_layers;
 pub mod audio_effects;
+pub mod conformer;
+pub mod tokenizer;
+pub mod vad_detector;
+pub mod audio_buffer;
+pub mod metrics;
 
 use serde::{Deserialize, Serialize};
 use std::sync::atomic::{AtomicU64, Ordering};
