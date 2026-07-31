@@ -1,9 +1,10 @@
+import importlib
 import importlib.util
 from setuptools import setup, Extension
 
 pybind11_spec = importlib.util.find_spec("pybind11")
 if pybind11_spec is not None:
-    import pybind11
+    pybind11 = importlib.import_module("pybind11")
     pybind_include = pybind11.get_include()
 else:
     pybind_include = "../../android/app/src/main/cpp"
