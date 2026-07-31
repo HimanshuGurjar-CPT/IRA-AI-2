@@ -33,7 +33,7 @@ class LatencyBenchmarkSuite:
         return elapsed
 
     async def run(self):
-        print(f"⚡ Starting Latency Benchmark ({self.iterations} audio frames)...")
+        print(f"[BENCHMARK] Starting Latency Benchmark ({self.iterations} audio frames)...")
         tasks = [self.simulate_audio_packet_pipeline(i) for i in range(self.iterations)]
         self.latencies_ms = await asyncio.gather(*tasks)
 

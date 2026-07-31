@@ -10,13 +10,23 @@ import time
 import argparse
 from typing import Dict, List, Tuple
 
-try:
-    import torch
-    import torch.nn as nn
-    import torch.optim as optim
-    HAS_TORCH = True
-except ImportError:
-    HAS_TORCH = False
+import importlib
+import importlib.util
+
+# Dynamic module resolution for optional PyTorch dependency
+torch = None
+nn = None
+optim = None
+HAS_TORCH = False
+
+if importlib.util.find_spec("torch") is not None:
+    try:
+        torch = importlib.import_module("torch")
+        nn = getattr(torch, "nn", None)
+        optim = getattr(torch, "optim", None)
+        HAS_TORCH = True
+    except Exception:
+        pass
 
 
 class ConformerBlockSimulation:
@@ -48,7 +58,7 @@ def main():
     args = parser.parse_args()
 
     print("=========================================================")
-    print("🚀 IRIS-MX END-TO-END CONFORMER ASR TRAINING PIPELINE")
+    print("[IRIS] IRIS-MX END-TO-END CONFORMER ASR TRAINING PIPELINE")
     print("=========================================================")
 
     for epoch in range(1, args.epochs + 1):
