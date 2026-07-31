@@ -11,6 +11,8 @@ pub mod tokenizer;
 pub mod vad_detector;
 pub mod audio_buffer;
 pub mod metrics;
+pub mod transformer;
+pub mod dsp_mel;
 
 use serde::{Deserialize, Serialize};
 use std::sync::atomic::{AtomicU64, Ordering};

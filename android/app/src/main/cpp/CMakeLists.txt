@@ -16,6 +16,8 @@ add_library(
     iris_conformer_encoder.cpp
     iris_beam_search_decoder.cpp
     iris_quantized_matmul.cpp
+    iris_tensor_operations.cpp
+    iris_audio_dsp_kernel.cpp
     raw_c_dsp.c
     iris_fft_radix4.c
     iris_filterbank.c
