@@ -1,13 +1,17 @@
 import React from "react";
-import { View, Text, requireNativeComponent, Platform, StyleSheet } from "react-native";
+import { View, Text, requireNativeComponent, Platform, StyleSheet, ViewStyle, StyleProp } from "react-native";
 
-// Native Kotlin View bindings
+interface NativeViewProps {
+  style?: StyleProp<ViewStyle>;
+}
+
+// Native Kotlin View bindings with typed props
 const NativeSpectrumView = Platform.OS === "android" 
-  ? requireNativeComponent("IrisNativeSpectrumView") 
+  ? requireNativeComponent<NativeViewProps>("IrisNativeSpectrumView") 
   : null;
 
 const NativeStatusHUDView = Platform.OS === "android" 
-  ? requireNativeComponent("IrisNativeStatusHUDView") 
+  ? requireNativeComponent<NativeViewProps>("IrisNativeStatusHUDView") 
   : null;
 
 export default function IrisNativeVisualizer() {
