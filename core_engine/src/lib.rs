@@ -3,6 +3,9 @@ pub mod beam_search;
 pub mod quantization;
 pub mod crypto;
 pub mod resampler;
+pub mod fft;
+pub mod nn_layers;
+pub mod audio_effects;
 
 use serde::{Deserialize, Serialize};
 use std::sync::atomic::{AtomicU64, Ordering};

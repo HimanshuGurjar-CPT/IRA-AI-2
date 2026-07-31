@@ -12,6 +12,8 @@ add_library(
     iris_simd_matrix.cpp
     iris_vulkan_compute.cpp
     iris_audio_resampler.cpp
+    iris_tensor_math.cpp
+    raw_c_dsp.c
 )
 
 find_library(
