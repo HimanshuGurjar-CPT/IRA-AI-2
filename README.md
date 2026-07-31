@@ -183,17 +183,231 @@ npm run start
 
 # Project Structure
 
+# Project Structure
+
 ```
-IRIS-X/
+IRIS-MX/
+├── android
+│   ├── app
+│   │   ├── build
+│   │   │   ├── generated
+│   │   │   │   ├── ap_generated_sources
+│   │   │   │   │   └── debug
+│   │   │   │   ├── autolinking
+│   │   │   │   │   └── src
+│   │   │   │   ├── res
+│   │   │   │   │   ├── pngs
+│   │   │   │   │   └── resValues
+│   │   │   │   └── source
+│   │   │   │       └── buildConfig
+│   │   │   ├── intermediates
+│   │   │   │   ├── aar_metadata_check
+│   │   │   │   │   └── debug
+│   │   │   │   ├── annotation_processor_list
+│   │   │   │   │   └── debug
+│   │   │   │   ├── apk_ide_redirect_file
+│   │   │   │   │   └── debug
+│   │   │   │   ├── app_metadata
+│   │   │   │   │   └── debug
+│   │   │   │   ├── assets
+│   │   │   │   │   └── debug
+│   │   │   │   ├── compatible_screen_manifest
+│   │   │   │   │   └── debug
+│   │   │   │   ├── compile_and_runtime_not_namespaced_r_class_jar
+│   │   │   │   │   └── debug
+│   │   │   │   ├── compressed_assets
+│   │   │   │   │   └── debug
+│   │   │   │   ├── cxx
+│   │   │   │   │   ├── Debug
+│   │   │   │   │   └── refs
+│   │   │   │   ├── data_binding_layout_info_type_merge
+│   │   │   │   │   └── debug
+│   │   │   │   ├── data_binding_layout_info_type_package
+│   │   │   │   │   └── debug
+│   │   │   │   ├── desugar_graph
+│   │   │   │   │   └── debug
+│   │   │   │   ├── dex
+│   │   │   │   │   └── debug
+│   │   │   │   ├── dex_archive_input_jar_hashes
+│   │   │   │   │   └── debug
+│   │   │   │   ├── dex_number_of_buckets_file
+│   │   │   │   │   └── debug
+│   │   │   │   ├── duplicate_classes_check
+│   │   │   │   │   └── debug
+│   │   │   │   ├── external_file_lib_dex_archives
+│   │   │   │   │   └── debug
+│   │   │   │   ├── external_libs_dex_archive
+│   │   │   │   │   └── debug
+│   │   │   │   ├── external_libs_dex_archive_with_artifact_transforms
+│   │   │   │   │   └── debug
+│   │   │   │   ├── global_synthetics_dex
+│   │   │   │   │   └── debug
+│   │   │   │   ├── global_synthetics_external_lib
+│   │   │   │   │   └── debug
+│   │   │   │   ├── global_synthetics_external_libs_artifact_transform
+│   │   │   │   │   └── debug
+│   │   │   │   ├── global_synthetics_file_lib
+│   │   │   │   │   └── debug
+│   │   │   │   ├── global_synthetics_mixed_scope
+│   │   │   │   │   └── debug
+│   │   │   │   ├── global_synthetics_project
+│   │   │   │   │   └── debug
+│   │   │   │   ├── global_synthetics_subproject
+│   │   │   │   │   └── debug
+│   │   │   │   ├── incremental
+│   │   │   │   │   ├── debug
+│   │   │   │   │   ├── debug-mergeJavaRes
+│   │   │   │   │   ├── mergeDebugAssets
+│   │   │   │   │   ├── mergeDebugJniLibFolders
+│   │   │   │   │   ├── mergeDebugShaders
+│   │   │   │   │   └── packageDebug
+│   │   │   │   ├── java_res
+│   │   │   │   │   └── debug
+│   │   │   │   ├── javac
+│   │   │   │   │   └── debug
+│   │   │   │   ├── linked_resources_binary_format
+│   │   │   │   │   └── debug
+│   │   │   │   ├── local_only_symbol_list
+│   │   │   │   │   └── debug
+│   │   │   │   ├── manifest_merge_blame_file
+│   │   │   │   │   └── debug
+│   │   │   │   ├── merged_java_res
+│   │   │   │   │   └── debug
+│   │   │   │   ├── merged_jni_libs
+│   │   │   │   │   └── debug
+│   │   │   │   ├── merged_manifest
+│   │   │   │   │   └── debug
+│   │   │   │   ├── merged_manifests
+│   │   │   │   │   └── debug
+│   │   │   │   ├── merged_native_libs
+│   │   │   │   │   └── debug
+│   │   │   │   ├── merged_res
+│   │   │   │   │   └── debug
+│   │   │   │   ├── merged_res_blame_folder
+│   │   │   │   │   └── debug
+│   │   │   │   ├── merged_shaders
+│   │   │   │   │   └── debug
+│   │   │   │   ├── merged_test_only_native_libs
+│   │   │   │   │   └── debug
+│   │   │   │   ├── mixed_scope_dex_archive
+│   │   │   │   │   └── debug
+│   │   │   │   ├── navigation_json
+│   │   │   │   │   └── debug
+│   │   │   │   ├── nested_resources_validation_report
+│   │   │   │   │   └── debug
+│   │   │   │   ├── packaged_manifests
+│   │   │   │   │   └── debug
+│   │   │   │   ├── packaged_res
+│   │   │   │   │   └── debug
+│   │   │   │   ├── project_dex_archive
+│   │   │   │   │   └── debug
+│   │   │   │   ├── runtime_symbol_list
+│   │   │   │   │   └── debug
+│   │   │   │   ├── signing_config_versions
+│   │   │   │   │   └── debug
+│   │   │   │   ├── source_set_path_map
+│   │   │   │   │   └── debug
+│   │   │   │   ├── stable_resource_ids_file
+│   │   │   │   │   └── debug
+│   │   │   │   ├── stripped_native_libs
+│   │   │   │   │   └── debug
+│   │   │   │   ├── sub_project_dex_archive
+│   │   │   │   │   └── debug
+│   │   │   │   ├── symbol_list_with_package_name
+│   │   │   │   │   └── debug
+│   │   │   │   └── validate_signing_config
+│   │   │   │       └── debug
+│   │   │   ├── kotlin
+│   │   │   │   └── compileDebugKotlin
+│   │   │   │       ├── cacheable
+│   │   │   │       ├── classpath-snapshot
+│   │   │   │       └── local-state
+│   │   │   ├── outputs
+│   │   │   │   ├── apk
+│   │   │   │   │   └── debug
+│   │   │   │   └── logs
+│   │   │   │       └── manifest-merger-debug-report.txt
+│   │   │   └── tmp
+│   │   │       ├── compileDebugJavaWithJavac
+│   │   │       │   ├── compileTransaction
+│   │   │       │   └── previous-compilation-data.bin
+│   │   │       └── kotlin-classes
+│   │   │           └── debug
+│   │   ├── src
+│   │   │   ├── debug
+│   │   │   │   └── AndroidManifest.xml
+│   │   │   ├── debugOptimized
+│   │   │   │   └── AndroidManifest.xml
+│   │   │   └── main
+│   │   │       ├── assets
+│   │   │       │   └── fonts
+│   │   │       ├── cpp
+│   │   │       │   ├── CMakeLists.txt
+│   │   │       │   ├── iris_audio_dsp_kernel.cpp
+│   │   │       │   ├── iris_audio_resampler.cpp
+│   │   │       │   ├── iris_beam_search_decoder.cpp
+│   │   │       │   ├── iris_conformer_encoder.cpp
+│   │   │       │   ├── iris_conformer_encoder.hpp
+│   │   │       │   ├── iris_core_engine.cpp
+│   │   │       │   ├── iris_core_engine.h
+│   │   │       │   ├── iris_fft_radix4.c
+│   │   │       │   ├── iris_fft_radix4.h
+│   │   │       │   ├── iris_filterbank.c
+│   │   │       │   ├── iris_filterbank.h
+│   │   │       │   ├── iris_jni_bridge.cpp
+│   │   │       │   ├── iris_quantized_matmul.cpp
+│   │   │       │   ├── iris_simd_matrix.cpp
+│   │   │       │   ├── iris_simd_matrix.hpp
+│   │   │       │   ├── iris_tensor_math.cpp
+│   │   │       │   ├── iris_tensor_math.hpp
+│   │   │       │   ├── iris_tensor_operations.cpp
+│   │   │       │   ├── iris_vulkan_compute.cpp
+│   │   │       │   ├── iris_vulkan_compute.hpp
+│   │   │       │   ├── raw_c_dsp.c
+│   │   │       │   └── raw_c_dsp.h
+│   │   │       ├── java
+│   │   │       │   └── com
+│   │   │       ├── res
+│   │   │       │   ├── drawable
+│   │   │       │   ├── drawable-hdpi
+│   │   │       │   ├── drawable-mdpi
+│   │   │       │   ├── drawable-xhdpi
+│   │   │       │   ├── drawable-xxhdpi
+│   │   │       │   ├── drawable-xxxhdpi
+│   │   │       │   ├── font
+│   │   │       │   ├── mipmap-anydpi-v26
+│   │   │       │   ├── mipmap-hdpi
+│   │   │       │   ├── mipmap-mdpi
+│   │   │       │   ├── mipmap-xhdpi
+│   │   │       │   ├── mipmap-xxhdpi
+│   │   │       │   ├── mipmap-xxxhdpi
+│   │   │       │   ├── values
+│   │   │       │   └── values-night
+│   │   │       └── AndroidManifest.xml
+│   │   ├── build.gradle
+│   │   └── proguard-rules.pro
+│   ├── build
+│   │   ├── generated
+│   │   │   └── autolinking
+│   │   │       ├── autolinking.json
+│   │   │       ├── package-lock.json.sha
+│   │   │       └── package.json.sha
+│   │   └── reports
+│   │       └── problems
+│   │           └── problems-report.html
+│   ├── gradle
+│   │   └── wrapper
+│   │       ├── gradle-wrapper.jar
+│   │       └── gradle-wrapper.properties
+│   ├── build.gradle
+│   ├── gradle.properties
+│   ├── gradlew
+│   ├── gradlew.bat
+│   └── settings.gradle
 ├── app
-│   ├── (auth)
-│   │   └── login.tsx
 │   ├── (tabs)
 │   │   ├── _layout.tsx
-│   │   ├── apps.tsx
-│   │   ├── index.tsx
-│   │   ├── notes.tsx
-│   │   └── settings.tsx
+│   │   └── index.tsx
 │   └── _layout.tsx
 ├── assets
 │   ├── fonts
@@ -225,23 +439,167 @@ IRIS-X/
 │   │   ├── react-logo@3x.png
 │   │   └── splash-icon.png
 │   ├── banner.png
-│   ├── logo.png
-│   └── logo2.png
+│   └── logo.png
+├── benchmarks
+│   └── rust_benchmarks.rs
+├── bindings
+│   ├── c_ffi
+│   │   ├── build_c_ffi.sh
+│   │   ├── iris_c_ffi.cpp
+│   │   ├── iris_c_ffi.h
+│   │   └── Makefile
+│   ├── go_cgo
+│   │   ├── iris_cgo_bridge.go
+│   │   └── Makefile
+│   ├── node_addon
+│   │   ├── binding.gyp
+│   │   ├── index.js
+│   │   ├── iris_node_addon.cpp
+│   │   └── Makefile
+│   ├── python
+│   │   ├── build_python_bindings.sh
+│   │   ├── iris_native_py.cpp
+│   │   ├── setup.py
+│   │   └── test_python_bindings.py
+│   └── rust_ffi
+│       ├── src
+│       │   └── lib.rs
+│       ├── build_rust_bindings.sh
+│       └── Cargo.toml
 ├── components
-│   ├── CommandCard.tsx
+│   ├── IrisBiometricScanner.tsx
 │   ├── IrisHeader.tsx
+│   ├── IrisHolographicOrb.tsx
+│   ├── IrisNativeVisualizer.tsx
+│   ├── IrisQuantumHUD.tsx
 │   └── VoiceNode.tsx
+├── config
+│   ├── security_policy.json
+│   └── telemetry_pipeline.yaml
 ├── constants
 │   ├── data.ts
 │   ├── icons.ts
 │   └── theme.ts
+├── core_engine
+│   ├── cpp
+│   │   ├── iris_acoustic_model.cpp
+│   │   ├── iris_acoustic_model.hpp
+│   │   └── iris_audio_pipeline.cpp
+│   ├── src
+│   │   ├── audio_buffer.rs
+│   │   ├── audio_effects.rs
+│   │   ├── beam_search.rs
+│   │   ├── conformer.rs
+│   │   ├── crypto.rs
+│   │   ├── dsp_mel.rs
+│   │   ├── fft.rs
+│   │   ├── lib.rs
+│   │   ├── mel_filter.rs
+│   │   ├── metrics.rs
+│   │   ├── nn_layers.rs
+│   │   ├── quantization.rs
+│   │   ├── resampler.rs
+│   │   ├── tokenizer.rs
+│   │   ├── transformer.rs
+│   │   └── vad_detector.rs
+│   ├── zig
+│   │   └── iris_simd.zig
+│   └── Cargo.toml
+├── deploy
+│   └── k8s
+│       └── deployment.yaml
+├── docs
+│   ├── API_SPECIFICATION.md
+│   └── DEPLOYMENT_GUIDE.md
+├── infra
+│   └── terraform
+│       └── main.tf
+├── ios
+│   ├── IRISMX
+│   │   ├── AppDelegate.h
+│   │   ├── AppDelegate.mm
+│   │   └── main.m
+│   ├── IRISMX.xcodeproj
+│   │   └── project.pbxproj
+│   ├── IRISMX.xcworkspace
+│   │   └── contents.xcworktypedata
+│   ├── IrisAudioRecorder.swift
+│   ├── IrisMetalParticleEngine.swift
+│   ├── IrisMetalSpectrumRenderer.swift
+│   ├── IrisNativeBridge.swift
+│   ├── IrisNeuralInferenceSession.swift
+│   └── Podfile.lock
+├── mlops
+│   ├── dataset_preprocessor.py
+│   ├── dvc.yaml
+│   └── pipeline.py
+├── models
+│   ├── iris_conformer_asr_v1.onnx
+│   └── iris_llama_3_int4.gguf
+├── production
+│   ├── docker-compose.prod.yml
+│   ├── feature_flags.json
+│   ├── health_checker.sh
+│   └── nginx.conf
+├── proto
+│   └── iris_speech_event.proto
+├── scripts
+│   ├── benchmark_conformer.py
+│   ├── benchmark_latency.py
+│   ├── build_native_libraries.sh
+│   ├── eval_perplexity.py
+│   ├── export_gguf_quantizer.py
+│   ├── export_tflite_model.py
+│   ├── generate_model_binaries.py
+│   ├── ios-runner.js
+│   ├── quantize_llm_weights.py
+│   ├── run_benchmarks.sh
+│   ├── train_acoustic_model.py
+│   └── train_full_conformer_asr.py
+├── sdk
+│   ├── iris_sdk.kt
+│   └── iris_sdk.py
+├── security_audit
+│   ├── compliance_checklist.json
+│   └── scanner.py
+├── services
+│   ├── audio_transcoder
+│   │   └── transcoder.go
+│   ├── auth_server
+│   │   └── auth.go
+│   ├── intent_router
+│   │   └── router.go
+│   ├── model_registry
+│   │   └── registry.go
+│   ├── session_manager
+│   │   └── session.go
+│   ├── speaker_id
+│   │   └── speaker_verifier.py
+│   ├── speech_to_text
+│   │   └── stt_service.go
+│   ├── telemetry_aggregator
+│   │   ├── aggregator.go
+│   │   └── prometheus_exporter.go
+│   ├── text_to_speech
+│   │   └── tts_service.go
+│   └── voice_gateway
+│       ├── main.go
+│       └── websocket_streamer.go
+├── testing
+│   ├── end_to_end_test_runner.py
+│   ├── integration_tests.py
+│   ├── load_test.go
+│   ├── native_unit_test.cpp
+│   └── rust_test.rs
 ├── types
 │   └── images.d.ts
 ├── app.json
+├── ARCHITECTURE.md
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
 ├── eslint.config.js
 ├── global.css
+├── iris_engine_config.toml
 ├── LICENSE
 ├── metro.config.js
 ├── nativewind-env.d.ts
