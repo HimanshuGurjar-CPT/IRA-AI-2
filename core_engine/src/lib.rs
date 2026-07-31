@@ -1,3 +1,9 @@
+pub mod mel_filter;
+pub mod beam_search;
+pub mod quantization;
+pub mod crypto;
+pub mod resampler;
+
 use serde::{Deserialize, Serialize};
 use std::sync::atomic::{AtomicU64, Ordering};
 

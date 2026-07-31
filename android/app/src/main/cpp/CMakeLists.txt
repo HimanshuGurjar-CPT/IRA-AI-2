@@ -9,6 +9,9 @@ add_library(
     SHARED
     iris_core_engine.cpp
     iris_jni_bridge.cpp
+    iris_simd_matrix.cpp
+    iris_vulkan_compute.cpp
+    iris_audio_resampler.cpp
 )
 
 find_library(
