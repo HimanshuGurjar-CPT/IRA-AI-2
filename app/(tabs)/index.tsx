@@ -1,5 +1,9 @@
 import CommandCard from "@/components/CommandCard";
+import IrisBiometricScanner from "@/components/IrisBiometricScanner";
 import IrisHeader from "@/components/IrisHeader";
+import IrisHolographicOrb from "@/components/IrisHolographicOrb";
+import IrisNativeVisualizer from "@/components/IrisNativeVisualizer";
+import IrisQuantumHUD from "@/components/IrisQuantumHUD";
 import VoiceNode from "@/components/VoiceNode";
 import { styled } from "nativewind";
 import { ScrollView } from "react-native";
@@ -12,10 +16,14 @@ const index = () => {
     <SafeAreaView className="flex-1 bg-black p-5">
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ paddingBottom: 24 }}
+        contentContainerStyle={{ paddingBottom: 32 }}
       >
         <IrisHeader />
+        <IrisHolographicOrb />
         <VoiceNode />
+        <IrisBiometricScanner />
+        <IrisNativeVisualizer />
+        <IrisQuantumHUD />
         <CommandCard />
       </ScrollView>
     </SafeAreaView>
