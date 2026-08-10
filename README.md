@@ -2,7 +2,7 @@
 
 ![IRIS-MX Mobile AI Assistant](./assets/banner.png)
 
-### Voice-First Mobile AI Execution System
+### Voice-First Mobile AI Execution System (v1.3.1)
 
 **Speak naturally. Control your Mobile Device. Automate Workflows on Android with Voice Commands.**
 
@@ -22,11 +22,11 @@
     <img src="https://badgen.net/github/contributors/IRISX-AI/IRIS-X?color=ff6600&icon=github" alt="Contributors">
   </a>
 
-  <a href="https://www.irisxai.in/download/mobile">
-    <img src="https://badgen.net/badge/Download/Mobile%20APK/ff6600?icon=android" alt="Download Mobile APK">
+  <a href="https://irisxai.in/download/mobile">
+    <img src="https://badgen.net/badge/Download/Mobile%20APK%20v1.3.1/ff6600?icon=android" alt="Download Mobile APK">
   </a>
 
-  <a href="https://www.irisxai.in/pricing/iris-mx">
+  <a href="https://irisxai.in/pricing/iris-mx">
     <img src="https://badgen.net/badge/License/Mobile%20PRO/10b981" alt="Mobile PRO License">
   </a>
 
@@ -34,7 +34,7 @@
 
 **Speak your command. IRIS-MX executes it directly on your phone.**
 
-A voice-first mobile execution assistant powered by **Gemini 3.1 Live API** with real-time bidirectional audio, floating system overlays, native app intents, and hardware automation.
+A voice-first mobile execution assistant powered by **Gemini 3.5 Flash Lite** & **Gemini Live WebSockets** (`wss://generativelanguage.googleapis.com/...`) with real-time bidirectional audio, floating system overlays, native app intents, hardware automation, incoming call control, real-time notification listener, and media session controls.
 
 ---
 
@@ -44,7 +44,8 @@ A voice-first mobile execution assistant powered by **Gemini 3.1 Live API** with
 
 - [⚡ Overview](#-overview)
 - [🎯 What is Voice-First Mobile?](#-what-is-voice-first-mobile)
-- [✨ Core Mobile Capabilities](#-core-mobile-capabilities)
+- [✨ What's New in v1.3.1](#-whats-new-in-v131)
+- [🛠️ Complete Tool Registry & Examples](#️-complete-tool-registry--examples)
 - [🪡 Open Core Model & Code Protection](#-open-core-model--code-protection)
 - [💰 Pricing & Licensing](#-pricing--licensing)
 - [🚀 Download & Setup](#-download--setup)
@@ -60,7 +61,7 @@ A voice-first mobile execution assistant powered by **Gemini 3.1 Live API** with
 
 IRIS-MX is not a basic chatbot.
 
-It is a **Voice-First Mobile AI Assistant** built on the powerful IRIS-AI Voice Engine. It listens to your spoken commands in real-time and executes real actions directly across your phone—opening apps, playing music, sending WhatsApp messages, making calls, controlling hardware settings, and managing device tasks.
+It is a **Voice-First Mobile AI Assistant** built on the powerful IRIS-AI Voice Engine. It listens to your spoken commands in real-time and executes real actions directly across your phone—answering/rejecting incoming phone calls, announcing caller names out loud, reading and auto-replying to WhatsApp/Instagram notifications, controlling Spotify/YouTube media playback, opening apps, controlling hardware settings, and managing device tasks.
 
 > **Speak naturally. IRIS-MX understands intent. Actions happen live on your mobile device.**
 
@@ -75,56 +76,120 @@ IRIS-MX changes that completely: **You speak → IRIS hears you in real time →
 ```
 Your Spoken Voice
     ↓ (Bidirectional Real-Time PCM Stream)
-Gemini 3.1 Live API
+Gemini 3.5 Flash Lite (WebSocket BidiGenerateContent)
     ↓ (Intent & Action Recognition)
 IRIS Mobile Execution Engine
-    ↓ (Native Intents & Hardware APIs)
-WhatsApp / Spotify / Calls / Settings / Camera / Overlays
+    ↓ (Native Kotlin Modules & Hardware APIs)
+Calls / Notifications / Spotify / WhatsApp / Settings / Camera / Overlays
 ```
 
 - **Latency:** Sub-second zero-latency bidirectional voice streams.
+- **Interruption-Proof Real-Time Injection:** Out-of-band live event payload streaming via `realtimeInput` so background notifications don't break active AI speech generation.
+- **Acoustic Echo Protection:** Ultra-early synchronous mic auto-mute and 200ms post-unmute acoustic decay protection to eliminate residual echo feedback loops.
 - **Background Resilient:** Runs via floating system overlays and background service loops.
 - **Multimodal Screen Streaming:** Real-time screen capture streaming directly to the AI for visual context.
 
 ---
 
-# ✨ Core Mobile Capabilities
+# ✨ What's New in v1.3.1
 
-### 💬 WhatsApp & Direct Communication
+### 📞 1. Incoming Call Management & Caller Name Announcer
 
-- **Send WhatsApp Messages:** Compose and launch direct WhatsApp messages to any contact by name.
-  - _Commands:_ "Send a WhatsApp message to Sidhu saying I'm on my way", "Message Mom on WhatsApp"
-- **Phone Calls & SMS:** Search device contacts and trigger calls or text messages instantly.
-  - _Commands:_ "Call Alex", "Send an SMS to Rahul saying call me back"
+- **Native TelecomManager Integration:** Detects incoming ringing calls, resolves contact names from `ContactsContract.PhoneLookup`, and accepts or declines calls hands-free.
+- **TTS Caller Announcer:** Announce caller identity out loud via native Text-To-Speech.
 
-### 🎵 Deep Link App Launching & Media Controls
+### 🔔 2. Real-Time System Notification Listener & Auto-Responder
 
-- **YouTube Playback:** Search and play any song or video on YouTube instantly.
-  - _Commands:_ "Play Believer on YouTube", "Open YouTube and search podcast"
-- **Spotify Streaming:** Trigger native Spotify music streaming for songs, artists, or playlists.
-  - _Commands:_ "Play synthwave on Spotify", "Resume Spotify music"
-- **Open Any App:** Launch any native mobile application installed on your device.
-  - _Commands:_ "Open Settings", "Launch Instagram", "Open Chrome"
+- **Background Notification Engine:** Continuous `NotificationListenerService` capturing incoming messages from WhatsApp, Instagram, Telegram, and SMS system packages.
+- **Autonomous RemoteInput Auto-Reply:** Generates intelligent, concise AI responses and sends background inline replies without user interaction.
 
-### ⚡ Hardware & System Controls
+### 🎵 3. Advanced System-Wide Media Controller
 
-- **Flashlight Control:** Instantly toggle your device's LED flashlight on or off.
-  - _Commands:_ "Turn on flashlight", "Turn off flashlight"
-- **System Settings Teleport:** Direct navigation to Wi-Fi, Bluetooth, Location, and Hotspot control panels.
-  - _Commands:_ "Open Wi-Fi settings", "Turn on Bluetooth settings"
+- **MediaKey Intent Broadcasts:** System-wide controls for active playback sessions across Spotify, YouTube, Apple Music, and podcast players.
+- **MediaSessionManager Integration:** Directly queries and controls active system media sessions.
 
-### 📅 Calendar & Memory Management
+### ⚡ 4. Gemini 3.5 Flash Lite & Raw WebSocket Pipeline
 
-- **Calendar Scheduling:** Check upcoming events and create new meetings in your device calendar.
-  - _Commands:_ "What's on my calendar for today?", "Schedule a meeting for tomorrow at 3 PM"
-- **Persistent AI Memory:** Remember important user facts, preferences, and notes across sessions.
-  - _Commands:_ "Remember my car parking spot is level 2", "What is my car parking spot?"
+- Standardized low-latency raw JSON WebSocket protocol over `wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContent`.
+- Powered by `models/gemini-3.5-flash-lite`.
 
-### 👁️ Multimodal Screen Vision & Floating Overlay
+---
 
-- **Real-Time Screen Capture:** Stream your live mobile screen directly to IRIS to ask questions about anything displayed.
-  - _Commands:_ "Look at my screen and summarize this article", "What code error is showing on screen?"
-- **Floating System Dock:** A glassmorphic quick-dock allowing instant voice mute, screen vision toggle, and status monitoring.
+# 🛠️ Complete Tool Registry & Examples
+
+IRIS-MX equips Gemini Live with native mobile system execution tools:
+
+### 📞 1. Cellular Phone Call Controller (`control_incoming_call`)
+
+- **Description:** Controls incoming cellular phone calls (answer, reject, or announce caller ID).
+- **Parameters:** `action` (`"answer" | "reject" | "announce"`)
+- **Use Cases & Prompts:**
+  - _"Who is calling right now?"_ -> Announces incoming caller name.
+  - _"Iris, answer the call."_ -> Accepts ringing call via TelecomManager.
+  - _"Reject the call."_ -> Hangs up incoming call.
+
+### 🔔 2. System Notification Listener & Auto-Responder (`manage_notification_listener`)
+
+- **Description:** Reads incoming WhatsApp, Instagram, and SMS system notifications in real-time or manages automated auto-reply mode.
+- **Parameters:** `action` (`"read_latest" | "enable_auto_reply" | "disable_auto_reply"`), `appFilter` (optional)
+- **Use Cases & Prompts:**
+  - _"Read my latest WhatsApp notifications."_ -> Fetches recent unread messages.
+  - _"Check if I have any new Instagram messages."_ -> Filters notifications by app.
+  - _"Turn on auto-reply mode."_ -> Enables autonomous background AI replies.
+
+### 🎵 3. System-Wide Media Playback Controller (`control_media_playback`)
+
+- **Description:** Controls system-wide media playback (play, pause, toggle, next track, previous track) for apps like Spotify, YouTube, and Apple Music via system MediaKey intents.
+- **Parameters:** `action` (`"play" | "pause" | "toggle" | "next" | "previous"`)
+- **Use Cases & Prompts:**
+  - _"Pause the music."_ -> Sends `KEYCODE_MEDIA_PAUSE`.
+  - _"Skip to the next song."_ -> Sends `KEYCODE_MEDIA_NEXT`.
+  - _"Go back to the previous track."_ -> Sends `KEYCODE_MEDIA_PREVIOUS`.
+  - _"Toggle playback."_ -> Sends `KEYCODE_MEDIA_PLAY_PAUSE`.
+
+### 💬 4. WhatsApp Messaging (`send_whatsapp_message`)
+
+- **Description:** Looks up contact phone number and opens direct WhatsApp chat window pre-filled with the message.
+- **Parameters:** `contactName`, `message`
+- **Use Cases & Prompts:**
+  - _"Send a WhatsApp message to Sidhu saying I'm running 10 minutes late."_
+  - _"Message Mom on WhatsApp asking what's for dinner."_
+
+### 📞 5. Contacts Search & Direct Phone Calls (`search_contacts`, `make_phone_call`, `send_sms_message`)
+
+- **Description:** Searches device contacts, places calls, or sends cellular SMS messages.
+- **Parameters:** `contactNameOrNumber`, `message`
+- **Use Cases & Prompts:**
+  - _"Find Alex in my contacts."_
+  - _"Call Rahul."_
+  - _"Send an SMS to Rahul saying call me back."_
+
+### 🔗 6. App Launching & Deep Linking (`open_deep_link`, `open_app`, `close_app`)
+
+- **Description:** Launches native apps or deep-links directly to search queries in YouTube, Spotify, Maps, or Chrome.
+- **Parameters:** `targetApp`, `query`, `appName`
+- **Use Cases & Prompts:**
+  - _"Play Believer on YouTube."_
+  - _"Open Spotify and play synthwave."_
+  - _"Open Settings."_
+
+### ⚡ 7. Hardware & Settings Teleport (`control_device_hardware`)
+
+- **Description:** Toggles device hardware (Flashlight) or navigates directly to Wi-Fi, Bluetooth, Location, and Hotspot settings panels.
+- **Parameters:** `target` (`"flashlight" | "wifi" | "bluetooth" | "location" | "hotspot"`), `action` (`"on" | "off" | "toggle" | "open"`)
+- **Use Cases & Prompts:**
+  - _"Turn on flashlight."_
+  - _"Open Wi-Fi settings."_
+
+### 📅 8. Calendar & Memory Management (`check_schedule`, `schedule_new_event`, `save_core_memory`, `access_core_memory`)
+
+- **Description:** Scans native OS calendar for 48-hour schedule, creates events, or persists user facts.
+- **Parameters:** `title`, `hoursFromNow`, `durationMinutes`, `fact`
+- **Use Cases & Prompts:**
+  - _"What's on my calendar for today?"_
+  - _"Schedule a meeting titled Team Sync 2 hours from now for 30 minutes."_
+  - _"Remember my car parking spot is level 2."_
+  - _"What is my car parking spot?"_
 
 ---
 
@@ -133,7 +198,7 @@ WhatsApp / Spotify / Calls / Settings / Camera / Overlays
 IRIS-MX is built on an **Open Core commercial model**:
 
 - **Public Repository ([IRIS-X](https://github.com/IRISX-AI/IRIS-X))**: Contains the user interface shell, navigation layout, theme system, and community integration examples.
-- **Private Production Core**: The core native voice execution engine, low-latency PCM audio stream pipelines, and proprietary background automation logic are protected and private.
+- **Private Production Core**: The core native voice execution engine, native Kotlin modules (`modules/overlay-service`, `modules/pcm-stream-player`, `modules/iris-autonomous`), low-latency PCM audio stream pipelines, and background automation logic are protected and private.
 
 > 🔒 **IRIS-MX is a paid software.** The public repository allows developers to inspect the UI shell, but full AI execution requires an active **Mobile PRO License**.
 
@@ -143,10 +208,10 @@ IRIS-MX is built on an **Open Core commercial model**:
 
 To use the full IRIS-MX Mobile AI Voice Assistant, you must activate a **Mobile PRO License**.
 
-- 💳 **Purchase Mobile PRO License:** [https://www.irisxai.in/pricing/iris-mx](https://www.irisxai.in/pricing/iris-mx)
-- 📲 **Download Official Mobile APK:** [https://www.irisxai.in/download/mobile](https://www.irisxai.in/download/mobile)
+- 💳 **Purchase Mobile PRO License:** [https://irisxai.in/pricing/iris-mx](https://irisxai.in/pricing/iris-mx)
+- 📲 **Download Official Mobile APK:** [https://irisxai.in/download/mobile](https://irisxai.in/download/mobile)
 
-_License activation is tied to your account and grants full access to native voice execution, background overlay permissions, and real-time screen streaming._
+_License activation is tied to your account and grants full access to native voice execution, background overlay permissions, real-time screen streaming, and autonomous call/notification handling._
 
 ---
 
@@ -154,9 +219,9 @@ _License activation is tied to your account and grants full access to native voi
 
 ### 📲 For Mobile App Users
 
-1. Download the official release APK directly from: [https://www.irisxai.in/download/mobile](https://www.irisxai.in/download/mobile)
+1. Download the official release APK (v1.3.1) directly from: [https://irisxai.in/download/mobile](https://irisxai.in/download/mobile)
 2. Install the APK on your Android device.
-3. Open IRIS-MX, sign in, and grant the required **Microphone** and **Display Over Other Apps** permissions.
+3. Open IRIS-MX, sign in, and grant required permissions (**Microphone**, **Display Over Other Apps**, **Notification Listener**, **Phone/Contacts**).
 4. Enter your Gemini API Key in Settings and tap **Start AI**!
 
 ### 💻 For Developers (UI Shell)
@@ -179,438 +244,48 @@ npm run start
 
 # 📁 Project Structure
 
-# Project Structure
-
-# Project Structure
-
-# Project Structure
-
 ```
 IRIS-MX/
-├── android
-│   ├── app
-│   │   ├── build
-│   │   │   ├── generated
-│   │   │   │   ├── ap_generated_sources
-│   │   │   │   │   └── debug
-│   │   │   │   ├── autolinking
-│   │   │   │   │   └── src
-│   │   │   │   ├── res
-│   │   │   │   │   ├── pngs
-│   │   │   │   │   └── resValues
-│   │   │   │   └── source
-│   │   │   │       └── buildConfig
-│   │   │   ├── intermediates
-│   │   │   │   ├── aar_metadata_check
-│   │   │   │   │   └── debug
-│   │   │   │   ├── annotation_processor_list
-│   │   │   │   │   └── debug
-│   │   │   │   ├── apk_ide_redirect_file
-│   │   │   │   │   └── debug
-│   │   │   │   ├── app_metadata
-│   │   │   │   │   └── debug
-│   │   │   │   ├── assets
-│   │   │   │   │   └── debug
-│   │   │   │   ├── compatible_screen_manifest
-│   │   │   │   │   └── debug
-│   │   │   │   ├── compile_and_runtime_not_namespaced_r_class_jar
-│   │   │   │   │   └── debug
-│   │   │   │   ├── compressed_assets
-│   │   │   │   │   └── debug
-│   │   │   │   ├── cxx
-│   │   │   │   │   ├── Debug
-│   │   │   │   │   └── refs
-│   │   │   │   ├── data_binding_layout_info_type_merge
-│   │   │   │   │   └── debug
-│   │   │   │   ├── data_binding_layout_info_type_package
-│   │   │   │   │   └── debug
-│   │   │   │   ├── desugar_graph
-│   │   │   │   │   └── debug
-│   │   │   │   ├── dex
-│   │   │   │   │   └── debug
-│   │   │   │   ├── dex_archive_input_jar_hashes
-│   │   │   │   │   └── debug
-│   │   │   │   ├── dex_number_of_buckets_file
-│   │   │   │   │   └── debug
-│   │   │   │   ├── duplicate_classes_check
-│   │   │   │   │   └── debug
-│   │   │   │   ├── external_file_lib_dex_archives
-│   │   │   │   │   └── debug
-│   │   │   │   ├── external_libs_dex_archive
-│   │   │   │   │   └── debug
-│   │   │   │   ├── external_libs_dex_archive_with_artifact_transforms
-│   │   │   │   │   └── debug
-│   │   │   │   ├── global_synthetics_dex
-│   │   │   │   │   └── debug
-│   │   │   │   ├── global_synthetics_external_lib
-│   │   │   │   │   └── debug
-│   │   │   │   ├── global_synthetics_external_libs_artifact_transform
-│   │   │   │   │   └── debug
-│   │   │   │   ├── global_synthetics_file_lib
-│   │   │   │   │   └── debug
-│   │   │   │   ├── global_synthetics_mixed_scope
-│   │   │   │   │   └── debug
-│   │   │   │   ├── global_synthetics_project
-│   │   │   │   │   └── debug
-│   │   │   │   ├── global_synthetics_subproject
-│   │   │   │   │   └── debug
-│   │   │   │   ├── incremental
-│   │   │   │   │   ├── debug
-│   │   │   │   │   ├── debug-mergeJavaRes
-│   │   │   │   │   ├── mergeDebugAssets
-│   │   │   │   │   ├── mergeDebugJniLibFolders
-│   │   │   │   │   ├── mergeDebugShaders
-│   │   │   │   │   └── packageDebug
-│   │   │   │   ├── java_res
-│   │   │   │   │   └── debug
-│   │   │   │   ├── javac
-│   │   │   │   │   └── debug
-│   │   │   │   ├── linked_resources_binary_format
-│   │   │   │   │   └── debug
-│   │   │   │   ├── local_only_symbol_list
-│   │   │   │   │   └── debug
-│   │   │   │   ├── manifest_merge_blame_file
-│   │   │   │   │   └── debug
-│   │   │   │   ├── merged_java_res
-│   │   │   │   │   └── debug
-│   │   │   │   ├── merged_jni_libs
-│   │   │   │   │   └── debug
-│   │   │   │   ├── merged_manifest
-│   │   │   │   │   └── debug
-│   │   │   │   ├── merged_manifests
-│   │   │   │   │   └── debug
-│   │   │   │   ├── merged_native_libs
-│   │   │   │   │   └── debug
-│   │   │   │   ├── merged_res
-│   │   │   │   │   └── debug
-│   │   │   │   ├── merged_res_blame_folder
-│   │   │   │   │   └── debug
-│   │   │   │   ├── merged_shaders
-│   │   │   │   │   └── debug
-│   │   │   │   ├── merged_test_only_native_libs
-│   │   │   │   │   └── debug
-│   │   │   │   ├── mixed_scope_dex_archive
-│   │   │   │   │   └── debug
-│   │   │   │   ├── navigation_json
-│   │   │   │   │   └── debug
-│   │   │   │   ├── nested_resources_validation_report
-│   │   │   │   │   └── debug
-│   │   │   │   ├── packaged_manifests
-│   │   │   │   │   └── debug
-│   │   │   │   ├── packaged_res
-│   │   │   │   │   └── debug
-│   │   │   │   ├── project_dex_archive
-│   │   │   │   │   └── debug
-│   │   │   │   ├── runtime_symbol_list
-│   │   │   │   │   └── debug
-│   │   │   │   ├── signing_config_versions
-│   │   │   │   │   └── debug
-│   │   │   │   ├── source_set_path_map
-│   │   │   │   │   └── debug
-│   │   │   │   ├── stable_resource_ids_file
-│   │   │   │   │   └── debug
-│   │   │   │   ├── stripped_native_libs
-│   │   │   │   │   └── debug
-│   │   │   │   ├── sub_project_dex_archive
-│   │   │   │   │   └── debug
-│   │   │   │   ├── symbol_list_with_package_name
-│   │   │   │   │   └── debug
-│   │   │   │   └── validate_signing_config
-│   │   │   │       └── debug
-│   │   │   ├── kotlin
-│   │   │   │   └── compileDebugKotlin
-│   │   │   │       ├── cacheable
-│   │   │   │       ├── classpath-snapshot
-│   │   │   │       └── local-state
-│   │   │   ├── outputs
-│   │   │   │   ├── apk
-│   │   │   │   │   └── debug
-│   │   │   │   └── logs
-│   │   │   │       └── manifest-merger-debug-report.txt
-│   │   │   └── tmp
-│   │   │       ├── compileDebugJavaWithJavac
-│   │   │       │   ├── compileTransaction
-│   │   │       │   └── previous-compilation-data.bin
-│   │   │       └── kotlin-classes
-│   │   │           └── debug
-│   │   ├── src
-│   │   │   ├── debug
-│   │   │   │   └── AndroidManifest.xml
-│   │   │   ├── debugOptimized
-│   │   │   │   └── AndroidManifest.xml
-│   │   │   └── main
-│   │   │       ├── assets
-│   │   │       │   └── fonts
-│   │   │       ├── cpp
-│   │   │       │   ├── CMakeLists.txt
-│   │   │       │   ├── iris_audio_dsp_kernel.cpp
-│   │   │       │   ├── iris_audio_resampler.cpp
-│   │   │       │   ├── iris_beam_search_decoder.cpp
-│   │   │       │   ├── iris_conformer_encoder.cpp
-│   │   │       │   ├── iris_conformer_encoder.hpp
-│   │   │       │   ├── iris_core_engine.cpp
-│   │   │       │   ├── iris_core_engine.h
-│   │   │       │   ├── iris_fft_radix4.c
-│   │   │       │   ├── iris_fft_radix4.h
-│   │   │       │   ├── iris_filterbank.c
-│   │   │       │   ├── iris_filterbank.h
-│   │   │       │   ├── iris_jni_bridge.cpp
-│   │   │       │   ├── iris_quantized_matmul.cpp
-│   │   │       │   ├── iris_simd_matrix.cpp
-│   │   │       │   ├── iris_simd_matrix.hpp
-│   │   │       │   ├── iris_tensor_math.cpp
-│   │   │       │   ├── iris_tensor_math.hpp
-│   │   │       │   ├── iris_tensor_operations.cpp
-│   │   │       │   ├── iris_vulkan_compute.cpp
-│   │   │       │   ├── iris_vulkan_compute.hpp
-│   │   │       │   ├── raw_c_dsp.c
-│   │   │       │   └── raw_c_dsp.h
-│   │   │       ├── java
-│   │   │       │   └── com
-│   │   │       ├── res
-│   │   │       │   ├── drawable
-│   │   │       │   ├── drawable-hdpi
-│   │   │       │   ├── drawable-mdpi
-│   │   │       │   ├── drawable-xhdpi
-│   │   │       │   ├── drawable-xxhdpi
-│   │   │       │   ├── drawable-xxxhdpi
-│   │   │       │   ├── font
-│   │   │       │   ├── mipmap-anydpi-v26
-│   │   │       │   ├── mipmap-hdpi
-│   │   │       │   ├── mipmap-mdpi
-│   │   │       │   ├── mipmap-xhdpi
-│   │   │       │   ├── mipmap-xxhdpi
-│   │   │       │   ├── mipmap-xxxhdpi
-│   │   │       │   ├── values
-│   │   │       │   └── values-night
-│   │   │       └── AndroidManifest.xml
-│   │   ├── build.gradle
-│   │   └── proguard-rules.pro
-│   ├── build
-│   │   ├── generated
-│   │   │   └── autolinking
-│   │   │       ├── autolinking.json
-│   │   │       ├── package-lock.json.sha
-│   │   │       └── package.json.sha
-│   │   └── reports
-│   │       └── problems
-│   │           └── problems-report.html
-│   ├── gradle
-│   │   └── wrapper
-│   │       ├── gradle-wrapper.jar
-│   │       └── gradle-wrapper.properties
-│   ├── build.gradle
-│   ├── gradle.properties
-│   ├── gradlew
-│   ├── gradlew.bat
-│   └── settings.gradle
-├── app
-│   ├── (tabs)
-│   │   ├── _layout.tsx
-│   │   └── index.tsx
-│   └── _layout.tsx
-├── assets
-│   ├── fonts
-│   │   ├── Antonio-Bold.ttf
-│   │   ├── Antonio-Medium.ttf
-│   │   ├── Antonio-Regular.ttf
-│   │   ├── Antonio-SemiBold.ttf
-│   │   ├── Outfit-ExtraLight.ttf
-│   │   ├── Outfit-Light.ttf
-│   │   ├── Outfit-Medium.ttf
-│   │   ├── Outfit-Regular.ttf
-│   │   ├── Outfit-SemiBold.ttf
-│   │   └── Outfit-Thin.ttf
-│   ├── icons
-│   │   ├── apps.png
-│   │   ├── home.png
-│   │   ├── iris-x.svg
-│   │   ├── notes.png
-│   │   └── profile.png
-│   ├── images
-│   │   ├── android-icon-background.png
-│   │   ├── android-icon-foreground.png
-│   │   ├── android-icon-monochrome.png
-│   │   ├── favicon.png
-│   │   ├── icon.png
-│   │   ├── partial-react-logo.png
-│   │   ├── react-logo.png
-│   │   ├── react-logo@2x.png
-│   │   ├── react-logo@3x.png
-│   │   └── splash-icon.png
-│   ├── banner.png
-│   └── logo.png
-├── benchmarks
-│   └── rust_benchmarks.rs
-├── bindings
-│   ├── c_ffi
-│   │   ├── build_c_ffi.sh
-│   │   ├── iris_c_ffi.cpp
-│   │   ├── iris_c_ffi.h
-│   │   └── Makefile
-│   ├── go_cgo
-│   │   ├── iris_cgo_bridge.go
-│   │   └── Makefile
-│   ├── node_addon
-│   │   ├── binding.gyp
-│   │   ├── index.js
-│   │   ├── iris_node_addon.cpp
-│   │   └── Makefile
-│   ├── python
-│   │   ├── build_python_bindings.sh
-│   │   ├── iris_native_py.cpp
-│   │   ├── setup.py
-│   │   └── test_python_bindings.py
-│   └── rust_ffi
-│       ├── src
-│       │   └── lib.rs
-│       ├── build_rust_bindings.sh
-│       └── Cargo.toml
-├── components
-│   ├── IrisBiometricScanner.tsx
-│   ├── IrisHeader.tsx
-│   ├── IrisHolographicOrb.tsx
-│   ├── IrisNativeVisualizer.tsx
-│   ├── IrisQuantumHUD.tsx
-│   └── VoiceNode.tsx
-├── config
-│   ├── security_policy.json
-│   └── telemetry_pipeline.yaml
-├── constants
-│   ├── data.ts
-│   ├── icons.ts
-│   └── theme.ts
-├── core_engine
-│   ├── cpp
-│   │   ├── iris_acoustic_model.cpp
-│   │   ├── iris_acoustic_model.hpp
-│   │   └── iris_audio_pipeline.cpp
-│   ├── src
-│   │   ├── audio_buffer.rs
-│   │   ├── audio_effects.rs
-│   │   ├── beam_search.rs
-│   │   ├── conformer.rs
-│   │   ├── crypto.rs
-│   │   ├── dsp_mel.rs
-│   │   ├── fft.rs
-│   │   ├── lib.rs
-│   │   ├── mel_filter.rs
-│   │   ├── metrics.rs
-│   │   ├── nn_layers.rs
-│   │   ├── quantization.rs
-│   │   ├── resampler.rs
-│   │   ├── tokenizer.rs
-│   │   ├── transformer.rs
-│   │   └── vad_detector.rs
-│   ├── zig
-│   │   └── iris_simd.zig
-│   └── Cargo.toml
-├── deploy
-│   └── k8s
-│       └── deployment.yaml
-├── docs
-│   ├── API_SPECIFICATION.md
-│   └── DEPLOYMENT_GUIDE.md
-├── infra
-│   └── terraform
-│       └── main.tf
-├── ios
-│   ├── IRISMX
-│   │   ├── AppDelegate.h
-│   │   ├── AppDelegate.mm
-│   │   └── main.m
-│   ├── IRISMX.xcodeproj
-│   │   └── project.pbxproj
-│   ├── IRISMX.xcworkspace
-│   │   └── contents.xcworktypedata
-│   ├── IrisAudioRecorder.swift
-│   ├── IrisMetalParticleEngine.swift
-│   ├── IrisMetalSpectrumRenderer.swift
-│   ├── IrisNativeBridge.swift
-│   ├── IrisNeuralInferenceSession.swift
-│   └── Podfile.lock
-├── mlops
-│   ├── dataset_preprocessor.py
-│   ├── dvc.yaml
-│   └── pipeline.py
-├── models
-│   ├── iris_conformer_asr_v1.onnx
-│   └── iris_llama_3_int4.gguf
-├── production
-│   ├── docker-compose.prod.yml
-│   ├── feature_flags.json
-│   ├── health_checker.sh
-│   └── nginx.conf
-├── proto
-│   └── iris_speech_event.proto
-├── scripts
-│   ├── benchmark_conformer.py
-│   ├── benchmark_latency.py
-│   ├── build_native_libraries.sh
-│   ├── eval_perplexity.py
-│   ├── export_gguf_quantizer.py
-│   ├── export_tflite_model.py
-│   ├── generate_model_binaries.py
-│   ├── ios-runner.js
-│   ├── quantize_llm_weights.py
-│   ├── run_benchmarks.sh
-│   ├── train_acoustic_model.py
-│   └── train_full_conformer_asr.py
-├── sdk
-│   ├── iris_sdk.kt
-│   └── iris_sdk.py
-├── security_audit
-│   ├── compliance_checklist.json
-│   └── scanner.py
-├── services
-│   ├── audio_transcoder
-│   │   └── transcoder.go
-│   ├── auth_server
-│   │   └── auth.go
-│   ├── intent_router
-│   │   └── router.go
-│   ├── model_registry
-│   │   └── registry.go
-│   ├── session_manager
-│   │   └── session.go
-│   ├── speaker_id
-│   │   └── speaker_verifier.py
-│   ├── speech_to_text
-│   │   └── stt_service.go
-│   ├── telemetry_aggregator
-│   │   ├── aggregator.go
-│   │   └── prometheus_exporter.go
-│   ├── text_to_speech
-│   │   └── tts_service.go
-│   └── voice_gateway
-│       ├── main.go
-│       └── websocket_streamer.go
-├── testing
-│   ├── end_to_end_test_runner.py
-│   ├── integration_tests.py
-│   ├── load_test.go
-│   ├── native_unit_test.cpp
-│   └── rust_test.rs
-├── types
-│   └── images.d.ts
-├── app.json
-├── ARCHITECTURE.md
-├── CODE_OF_CONDUCT.md
-├── CONTRIBUTING.md
-├── eslint.config.js
-├── global.css
-├── iris_engine_config.toml
-├── LICENSE
-├── metro.config.js
-├── nativewind-env.d.ts
-├── package-lock.json
-├── package.json
-├── postcss.config.mjs
-├── README.md
-├── SECURITY.md
-├── tsconfig.json
-├── type.d.ts
-└── update-manifest.json
+├── android/                        # Android native project wrapper
+│   ├── app/                        # Main Android application module
+│   └── build.gradle
+├── modules/                        # Custom Native Expo Kotlin Modules
+│   ├── iris-autonomous/            # Notification Listener, Call Screening & MediaSession Kotlin engine
+│   ├── overlay-service/            # Floating System Overlay FGS & Foreground Service
+│   ├── pcm-stream-player/          # Zero-latency PCM stream AudioTrack player & MediaKey dispatch
+│   └── screen-capture/             # Native Screen Recording & Vision Streamer
+├── src/
+│   ├── app/                        # Expo Router Navigation & Screen Pages
+│   │   ├── (tabs)/                 # Main Navigation Tabs (Home, Notes, Profile)
+│   │   ├── settings/               # Settings & API Key Configuration
+│   │   └── _layout.tsx
+│   ├── components/                 # UI Components & Glassmorphic Dock
+│   │   ├── IrisDock.tsx            # Main Control Floating Dock
+│   │   └── IrisQuantumHUD.tsx      # Holographic Voice HUD
+│   ├── logic/                      # React Native Execution Bridges
+│   │   ├── autonomous-agent.ts     # Autonomous Notification & Call Handler Engine
+│   │   ├── call-control.ts         # Incoming Call Management Bridge
+│   │   ├── media-control.ts        # System MediaKey Execution Bridge
+│   │   ├── notification-agent.ts   # Notification Listener State Manager
+│   │   ├── calendar-agent.ts       # Native OS Calendar Integration
+│   │   ├── contacts-agent.ts       # Contacts & Cellular Intent Bridge
+│   │   ├── app-control.ts          # Application Launcher Bridge
+│   │   └── hardware.ts             # Hardware Teleport & Settings Controller
+│   ├── services/                   # Core Voice & Network Services
+│   │   ├── WebSocketService.ts     # Raw Gemini Live WebSocket Protocol & Out-of-band Live Injection
+│   │   ├── AudioInputService.ts    # Native Mic FGS Streamer & Post-Unmute Echo Protection
+│   │   ├── AudioOutputService.ts   # Zero-Latency AudioTrack Output Streamer
+│   │   ├── OverlayOrchestrator.ts  # Background Overlay & System State Manager
+│   │   ├── PermissionsService.ts   # Android Permission Gatekeeper
+│   │   └── ApiKeyService.ts        # Secure Local BYOK Vault
+│   ├── tools/
+│   │   └── tools.ts                # Master Mobile Tool Declarations & Router
+│   └── store/
+│       └── authStore.ts            # Authentication & License Gatekeeper
+├── app.json                        # Expo App Configuration
+├── package.json                    # Project Dependencies (v1.3.1)
+├── tsconfig.json                   # TypeScript Config
+└── README.md
 ```
 
 ---
@@ -629,8 +304,8 @@ We welcome UI improvements, bug fixes, and community contributions to the fronte
 # 🔒 Security & Privacy
 
 - **100% Bring-Your-Own-Key (BYOK):** Your Gemini API Key is stored encrypted in your device's secure local storage and never leaves your device.
-- **Biometric & Permission Control:** System overlays and microphone access are explicitly requested and can be toggled anytime.
-- **Zero Data Logging:** No audio streams or conversation logs are recorded or sold.
+- **Biometric & Permission Control:** System overlays, notification listener, and microphone access are explicitly requested and can be toggled anytime in Settings.
+- **Zero Data Logging:** No audio streams, notification contents, or conversation logs are recorded or sold.
 
 ---
 
@@ -639,7 +314,7 @@ We welcome UI improvements, bug fixes, and community contributions to the fronte
 **Harsh Pandey**  
 Founder & AI Systems Architect, IRISX-AI
 
-- 🌐 **Website:** [https://www.irisxai.in](https://www.irisxai.in)
+- 🌐 **Website:** [https://irisxai.in](https://irisxai.in)
 - 📧 **Source Code & Enterprise Inquiries:** `irisaidevop@gmail.com`
 - 🎬 **Instagram:** [@irisx.ai](https://www.instagram.com/irisx.ai)
 - 💻 **GitHub:** [@201Harsh](https://github.com/201Harsh) | [@IRISX-AI](https://github.com/IRISX-AI)
@@ -657,7 +332,7 @@ See [LICENSE](LICENSE) for full details.
 
 <div align="center">
 
-**System Online. IRIS-MX Activated.**
+**System Online. IRIS-MX v1.3.1 Activated.**
 
 Made with ❤️ by [Harsh Pandey](https://instagram.com/201Harshs)
 
