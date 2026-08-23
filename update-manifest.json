@@ -1,5 +1,5 @@
 {
-  "latestVersion": "1.3.3",
-  "apkDownloadUrl": "https://github.com/IRISX-AI/IRIS-X/releases/download/v1.3.3/IRIS-MX.v1.3.3.apk",
-  "releaseNotes": "Hotfix v1.3.3: Resolved release APK crash on enabling Accessibility (R8/ProGuard protection); fixed false-negative permission detection; patched Android 11+ app package visibility; and permanently eliminated AI voice echo with zero-latency native mic gating and 350ms acoustic room dampening."
+  "latestVersion": "1.3.4",
+  "apkDownloadUrl": "https://github.com/IRISX-AI/IRIS-X/releases/download/v1.3.4/IRIS-MX.v1.3.4.apk",
+  "releaseNotes": "Hotfix v1.3.4: Resolved YouTube playback freeze with non-blocking native URI dispatch; eliminated infinite notification loop with version deduplication and self-package filters; patched incoming call manager with modern TelephonyCallback; and finalized release APK ProGuard keep-rules."
 }
