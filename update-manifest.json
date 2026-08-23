@@ -1,5 +1,5 @@
 {
-  "latestVersion": "1.3.2",
-  "apkDownloadUrl": "https://github.com/IRISX-AI/IRIS-X/releases/download/v1.3.2/IRIS-MX.v1.3.2.apk",
-  "releaseNotes": "Build v1.3.2: 100% Autonomous WhatsApp Ghost Control (contact & group auto-send); exact YouTube video player (ad & Shorts bypass); Spotify direct track playback with popup dismissal; native CameraX photo & timed video recording; hands-free Reels/Shorts gesture scroller; and background UI tree polling stability."
+  "latestVersion": "1.3.3",
+  "apkDownloadUrl": "https://github.com/IRISX-AI/IRIS-X/releases/download/v1.3.3/IRIS-MX.v1.3.3.apk",
+  "releaseNotes": "Hotfix v1.3.3: Resolved release APK crash on enabling Accessibility (R8/ProGuard protection); fixed false-negative permission detection; patched Android 11+ app package visibility; and permanently eliminated AI voice echo with zero-latency native mic gating and 350ms acoustic room dampening."
 }
