@@ -1,7 +1,7 @@
 name: Build Android APK with Expo
 
 on:
-  workflow_dispatch: # Isse aap GitHub par 1-click karke build start kar sakenge
+  workflow_dispatch:
 
 jobs:
   build:
@@ -13,17 +13,20 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
+          cache: 'npm'
 
-      - name: Setup Expo
+      - name: Setup EAS CLI
         uses: expo/expo-github-action@v8
         with:
-          expo-version: latest
+          eas-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
-      - name: Run EAS Build
+      - name: Trigger EAS Build
         run: eas build --platform android --profile preview --non-interactive
-        
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+          
