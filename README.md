@@ -47,7 +47,7 @@ A voice-first mobile execution assistant powered by **Gemini 3.5 Flash Lite** & 
 - [✨ What's New in v1.0.1](#-whats-new-in-v131)
 - [🛠️ Complete Tool Registry & Examples](#️-complete-tool-registry--examples)
 - [🪡 Open Core Model & Code Protection](#-open-core-model--code-protection)
-- [💰 Pricing & Licensing](#-pricing--licensing)
+- [💰 Pricing](#-pricing)
 - [🚀 Download & Setup](#-download--setup)
 - [📁 Project Structure](#-project-structure)
 - [🤝 Contributing](#-contributing)
