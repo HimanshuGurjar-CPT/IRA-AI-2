@@ -2,7 +2,7 @@
 
 ![IRA-AI Mobile AI Assistant](./assets/banneriraai.png)
 
-### Voice-First Mobile AI Execution System (v1.3.1)
+### Voice-First Mobile AI Execution System (v1.0.1)
 
 **Speak naturally. Control your Mobile Device. Automate Workflows on Android with Voice Commands.**
 
@@ -196,7 +196,7 @@ IRA-AI equips Gemini Live with native mobile system execution tools:
 
 IRA-AI is built on an **Open Core commercial model**:
 
-- **Public Repository ([IRA-AI](https://github.com/HimanshuGurjar-CPT/IRA-AI2))**: Contains the user interface shell, navigation layout, theme system, and community integration examples.
+- **Public Repository ([IRA-AI](https://github.com/HimanshuGurjar-CPT/IRA-AI-2))**: Contains the user interface shell, navigation layout, theme system, and community integration examples.
 - **Private Production Core**: The core native voice execution engine, native Kotlin modules (`modules/overlay-service`, `modules/pcm-stream-player`, `modules/iris-autonomous`), low-latency PCM audio stream pipelines, and background automation logic are protected and private.
 
 > 🔒 **IRA-AI is a Free software.** The public repository allows developers to inspect the UI shell, but full AI execution requires an active **Mobile PRO License**. Who want to use the app just DM on Instagram.
@@ -207,8 +207,8 @@ IRA-AI is built on an **Open Core commercial model**:
 
 To use the full IRA-AI Mobile AI Voice Assistant, you must activate a **Mobile PRO License**.
 
-- 💳 **Purchase Mobile PRO License:** [https://irisxai.in/pricing/iris-mx](https://irisxai.in/pricing/iris-mx)
-- 📲 **Download Official Mobile APK:** [https://irisxai.in/download/mobile](https://irisxai.in/download/mobile)
+- 💳 **Purchase Mobile PRO License:** [DM Now to convert your account to Pro]
+- 📲 **Download Official Mobile APK:** [Coming Soon 🔜]
 
 ---
 
