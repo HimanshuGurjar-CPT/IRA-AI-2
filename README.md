@@ -32,7 +32,7 @@
 
 </div>
 
-**Speak your command. IRIS-MX executes it directly on your phone.**
+**Speak your command. IRA-AI executes it directly on your phone.**
 
 A voice-first mobile execution assistant powered by **Gemini 3.5 Flash Lite** & **Gemini Live WebSockets** (`wss://generativelanguage.googleapis.com/...`) with real-time bidirectional audio, floating system overlays, native app intents, hardware automation, incoming call control, real-time notification listener, and media session controls.
 
@@ -44,7 +44,7 @@ A voice-first mobile execution assistant powered by **Gemini 3.5 Flash Lite** & 
 
 - [⚡ Overview](#-overview)
 - [🎯 What is Voice-First Mobile?](#-what-is-voice-first-mobile)
-- [✨ What's New in v1.3.1](#-whats-new-in-v131)
+- [✨ What's New in v1.0.1](#-whats-new-in-v131)
 - [🛠️ Complete Tool Registry & Examples](#️-complete-tool-registry--examples)
 - [🪡 Open Core Model & Code Protection](#-open-core-model--code-protection)
 - [💰 Pricing & Licensing](#-pricing--licensing)
@@ -53,17 +53,16 @@ A voice-first mobile execution assistant powered by **Gemini 3.5 Flash Lite** & 
 - [🤝 Contributing](#-contributing)
 - [🔒 Security & Privacy](#-security--privacy)
 - [👨‍💻 Architect & Contact](#-architect--contact)
-- [📜 License](#-license)
 
 ---
 
 # ⚡ Overview
 
-IRIS-MX is not a basic chatbot.
+IRA-AI is not a basic chatbot.
 
-It is a **Voice-First Mobile AI Assistant** built on the powerful IRIS-AI Voice Engine. It listens to your spoken commands in real-time and executes real actions directly across your phone—answering/rejecting incoming phone calls, announcing caller names out loud, reading and auto-replying to WhatsApp/Instagram notifications, controlling Spotify/YouTube media playback, opening apps, controlling hardware settings, and managing device tasks.
+It is a **Voice-First Mobile AI Assistant** built on the powerful IRA-AI Voice Engine. It listens to your spoken commands in real-time and executes real actions directly across your phone—answering/rejecting incoming phone calls, announcing caller names out loud, reading and auto-replying to WhatsApp/Instagram notifications, controlling Spotify/YouTube media playback, opening apps, controlling hardware settings, and managing device tasks.
 
-> **Speak naturally. IRIS-MX understands intent. Actions happen live on your mobile device.**
+> **Speak naturally. IRA-AI understands intent. Actions happen live on your mobile device.**
 
 ---
 
@@ -71,14 +70,14 @@ It is a **Voice-First Mobile AI Assistant** built on the powerful IRIS-AI Voice 
 
 Traditional phone apps force you to unlock your screen, find an icon, tap buttons, and type text.
 
-IRIS-MX changes that completely: **You speak → IRIS hears you in real time → Actions execute on your phone.**
+IRA-AI changes that completely: **You speak → IRA hears you in real time → Actions execute on your phone.**
 
 ```
 Your Spoken Voice
     ↓ (Bidirectional Real-Time PCM Stream)
 Gemini 3.5 Flash Lite (WebSocket BidiGenerateContent)
     ↓ (Intent & Action Recognition)
-IRIS Mobile Execution Engine
+IRA Mobile Execution Engine
     ↓ (Native Kotlin Modules & Hardware APIs)
 Calls / Notifications / Spotify / WhatsApp / Settings / Camera / Overlays
 ```
@@ -91,7 +90,7 @@ Calls / Notifications / Spotify / WhatsApp / Settings / Camera / Overlays
 
 ---
 
-# ✨ What's New in v1.3.1
+# ✨ What's New in v1.0.1
 
 ### 📞 1. Incoming Call Management & Caller Name Announcer
 
@@ -117,7 +116,7 @@ Calls / Notifications / Spotify / WhatsApp / Settings / Camera / Overlays
 
 # 🛠️ Complete Tool Registry & Examples
 
-IRIS-MX equips Gemini Live with native mobile system execution tools:
+IRA-AI equips Gemini Live with native mobile system execution tools:
 
 ### 📞 1. Cellular Phone Call Controller (`control_incoming_call`)
 
@@ -195,23 +194,21 @@ IRIS-MX equips Gemini Live with native mobile system execution tools:
 
 # 🪡 Open Core Model & Code Protection
 
-IRIS-MX is built on an **Open Core commercial model**:
+IRA-AI is built on an **Open Core commercial model**:
 
-- **Public Repository ([IRIS-X](https://github.com/IRISX-AI/IRIS-X))**: Contains the user interface shell, navigation layout, theme system, and community integration examples.
+- **Public Repository ([IRA-AI](https://github.com/HimanshuGurjar-CPT/IRA-AI2))**: Contains the user interface shell, navigation layout, theme system, and community integration examples.
 - **Private Production Core**: The core native voice execution engine, native Kotlin modules (`modules/overlay-service`, `modules/pcm-stream-player`, `modules/iris-autonomous`), low-latency PCM audio stream pipelines, and background automation logic are protected and private.
 
-> 🔒 **IRIS-MX is a paid software.** The public repository allows developers to inspect the UI shell, but full AI execution requires an active **Mobile PRO License**.
+> 🔒 **IRA-AI is a Free software.** The public repository allows developers to inspect the UI shell, but full AI execution requires an active **Mobile PRO License**. Who want to use the app just DM on Instagram.
 
 ---
 
-# 💰 Pricing & Licensing
+# 💰 Pricing
 
-To use the full IRIS-MX Mobile AI Voice Assistant, you must activate a **Mobile PRO License**.
+To use the full IRA-AI Mobile AI Voice Assistant, you must activate a **Mobile PRO License**.
 
 - 💳 **Purchase Mobile PRO License:** [https://irisxai.in/pricing/iris-mx](https://irisxai.in/pricing/iris-mx)
 - 📲 **Download Official Mobile APK:** [https://irisxai.in/download/mobile](https://irisxai.in/download/mobile)
-
-_License activation is tied to your account and grants full access to native voice execution, background overlay permissions, real-time screen streaming, and autonomous call/notification handling._
 
 ---
 
@@ -219,26 +216,10 @@ _License activation is tied to your account and grants full access to native voi
 
 ### 📲 For Mobile App Users
 
-1. Download the official release APK (v1.3.1) directly from: [https://irisxai.in/download/mobile](https://irisxai.in/download/mobile)
+1. Download the official release APK (v1.0.1) directly from: [Coming Soon]
 2. Install the APK on your Android device.
-3. Open IRIS-MX, sign in, and grant required permissions (**Microphone**, **Display Over Other Apps**, **Notification Listener**, **Phone/Contacts**).
+3. Open IRA-AI, sign in, and grant required permissions (**Microphone**, **Display Over Other Apps**, **Notification Listener**, **Phone/Contacts**).
 4. Enter your Gemini API Key in Settings and tap **Start AI**!
-
-### 💻 For Developers (UI Shell)
-
-To run and inspect the public frontend shell locally:
-
-```bash
-# 1. Clone the public repository
-git clone https://github.com/IRISX-AI/IRIS-X.git
-cd IRIS-X
-
-# 2. Install dependencies
-npm install
-
-# 3. Start Expo development server
-npm run start
-```
 
 ---
 
@@ -309,31 +290,17 @@ We welcome UI improvements, bug fixes, and community contributions to the fronte
 
 ---
 
-# 👨‍💻 Architect & Contact
+# 👨‍💻 Architect
 
-**Harsh Pandey**  
-Founder & AI Systems Architect, IRISX-AI
-
-- 🌐 **Website:** [https://irisxai.in](https://irisxai.in)
-- 📧 **Source Code & Enterprise Inquiries:** `irisaidevop@gmail.com`
-- 🎬 **Instagram:** [@irisx.ai](https://www.instagram.com/irisx.ai)
-- 💻 **GitHub:** [@201Harsh](https://github.com/201Harsh) | [@IRISX-AI](https://github.com/IRISX-AI)
-
----
-
-# 📜 License
-
-The UI Shell in this repository is licensed under the **MIT License**.  
-The core IRIS-MX native voice engine and agent execution logic are proprietary software subject to the **IRIS-MX Commercial License**.
-
-See [LICENSE](LICENSE) for full details.
+**Himanshu Gurjar**  
+Founder & AI Systems Architect, IRA-AI
 
 ---
 
 <div align="center">
 
-**System Online. IRIS-MX v1.3.1 Activated.**
+**System Online. IRA-AI v1.0.1 Activated.**
 
-Made with ❤️ by [Harsh Pandey](https://instagram.com/201Harshs)
+Made with ❤️ by [Himanshu Gurjar](https://instagram.com/ira.ai)
 
 </div>
