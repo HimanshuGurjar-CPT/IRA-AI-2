@@ -1,6 +1,6 @@
 <div align="center">
 
-![IRIS-MX Mobile AI Assistant](./assets/banner.png)
+![IRA-AI Mobile AI Assistant](./assets/banneriraai.png)
 
 ### Voice-First Mobile AI Execution System (v1.3.1)
 
