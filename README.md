@@ -23,10 +23,10 @@
   </a>
 
   <a href="https://irisxai.in/download/mobile">
-    <img src="https://badgen.net/badge/Download/Mobile%20APK%20v1.3.1/ff6600?icon=android" alt="Download Mobile APK">
+    <img src="https://badgen.net/badge/Download/Mobile%20APK%20v1.0.1/ff6600?icon=android" alt="Download Mobile APK">
   </a>
 
-  <a href="https://irisxai.in/pricing/iris-mx">
+  <a href="Coming Soon">
     <img src="https://badgen.net/badge/License/Mobile%20PRO/10b981" alt="Mobile PRO License">
   </a>
 
