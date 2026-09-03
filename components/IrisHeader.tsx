@@ -9,8 +9,8 @@ const IrisHeader = () => {
         <SignalHighIcon color="#02c944" size={32} />
         <View>
           <Text className="text-white text-3xl text-center font-antonio-bold tracking-wider">
-            IRIS
-            <Text className="text-main">-X</Text>
+            IRA
+            <Text className="text-main">-AI</Text>
           </Text>
         </View>
         <View>
