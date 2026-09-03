@@ -1,4 +1,4 @@
-package com.x201harsh.IRISMX
+package com.iraai.himanshu
 import expo.modules.splashscreen.SplashScreenManager
 
 import android.os.Build
