@@ -12,6 +12,7 @@ console.log("\n=========================================================");
 console.log("🍏 IRIS-MX NATIVE iOS ENGINE & XCODE BUILD SYSTEM");
 console.log("=========================================================\n");
 
+// eslint-disable-next-line no-undef
 const iosDir = path.join(__dirname, '..', 'ios');
 if (!fs.existsSync(iosDir)) {
   fs.mkdirSync(iosDir, { recursive: true });
