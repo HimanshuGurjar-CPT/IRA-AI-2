@@ -64,7 +64,7 @@ export default function IrisNativeVisualizer() {
           <NativeSpectrumView style={styles.nativeView} />
         ) : (
           <View style={styles.hybridSpectrumContainer}>
-            <Text style={styles.cardOverlayText}>IRIS HIGH-FREQUENCY FREQUENCY SPECTRUM (44.1kHz)</Text>
+            <Text style={styles.cardOverlayText}>IRA HIGH-FREQUENCY FREQUENCY SPECTRUM (44.1kHz)</Text>
             <View style={styles.spectrumBarRow}>
               {bars.map((h, i) => (
                 <View
