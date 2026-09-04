@@ -1,6 +1,6 @@
-# 🤝 Contributing to IRIS-MX / IRIS-X
+# 🤝 Contributing to IRA-AI
 
-Thank you for your interest in contributing to **IRIS-MX**! We welcome community contributions to our public frontend UI shell, components, and integrations.
+Thank you for your interest in contributing to **IRA-AI**! We welcome community contributions to our public frontend UI shell, components, and integrations.
 
 ---
 
@@ -25,7 +25,7 @@ IRIS-MX operates under an **Open Core Commercial Model**:
 
 ## 🚀 How to Contribute
 
-1. **Fork the Repository**: Fork [IRISX-AI/IRIS-X](https://github.com/IRISX-AI/IRIS-X) on GitHub.
+1. **Fork the Repository**: Fork [IRISX-AI/IRIS-X](https://github.com/HimanshuGurjar-CPT/IRA-AI-2) on GitHub.
 2. **Create a Feature Branch**:
    ```bash
    git checkout -b feat/my-cool-widget
@@ -41,6 +41,6 @@ IRIS-MX operates under an **Open Core Commercial Model**:
 
 ## 💬 Questions & Support
 
-- **Website & License**: [https://www.irisxai.in/pricing/iris-mx](https://www.irisxai.in/pricing/iris-mx)
-- **Official Download**: [https://www.irisxai.in/download/mobile](https://www.irisxai.in/download/mobile)
+- **Website**: Coming Soon 🔜 
+- **Official Download**: Coming Soon 🔜 
 - **Developer Email**: `irisaidevop@gmail.com`
