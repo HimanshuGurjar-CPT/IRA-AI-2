@@ -1,6 +1,6 @@
-# ⚡ IRIS-MX Technical Architecture
+# ⚡ IRA-AI Technical Architecture
 
-IRIS-MX is built on a **multi-language, low-latency, zero-copy native signal processing architecture** optimized for real-time voice interaction, neural intent evaluation, and hardware-accelerated spectrum rendering.
+IRA-AI is built on a **multi-language, low-latency, zero-copy native signal processing architecture** optimized for real-time voice interaction, neural intent evaluation, and hardware-accelerated spectrum rendering.
 
 ```
                   ┌────────────────────────────────────────────────────────┐
