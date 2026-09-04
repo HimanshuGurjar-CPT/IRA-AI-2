@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from "react-native";
 export default function IrisQuantumHUD() {
   return (
     <View style={styles.hudCard}>
-      <Text style={styles.hudTitle}>🌐 IRIS MULTI-SERVICE SYSTEM MATRIX</Text>
+      <Text style={styles.hudTitle}>🌐 IRA MULTI-SERVICE SYSTEM MATRIX</Text>
       
       <View style={styles.gridContainer}>
         <View style={styles.gridItem}>
