@@ -1,6 +1,6 @@
-# 🔒 Security Policy — IRIS-MX
+# 🔒 Security Policy — IRA-AI
 
-At IRISX-AI, security and privacy are fundamental principles of our design architecture.
+At IRA-AI, security and privacy are fundamental principles of our design architecture.
 
 ---
 
@@ -13,7 +13,7 @@ At IRISX-AI, security and privacy are fundamental principles of our design archi
 
 ## 🛡️ Reporting a Vulnerability
 
-If you discover a security vulnerability within IRIS-MX or the public UI shell, please report it responsibly:
+If you discover a security vulnerability within IRA-AI or the public UI shell, please report it responsibly:
 
 1. **Do NOT open a public issue** on GitHub.
 2. Email the vulnerability details directly to **`irisaidevop@gmail.com`**.
@@ -25,4 +25,4 @@ We appreciate your effort in responsibly disclosing findings to keep our users s
 
 ## 📜 Commercial & Security Inquiries
 
-For enterprise licensing, security audits, or private source code requests, please reach out to **`irisaidevop@gmail.com`** or visit [https://www.irisxai.in](https://www.irisxai.in).
+For enterprise licensing, security audits, or private source code requests, please reach out to **`irisaidevop@gmail.com`**
