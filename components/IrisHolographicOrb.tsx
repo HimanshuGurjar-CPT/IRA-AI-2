@@ -61,7 +61,7 @@ export default function IrisHolographicOrb() {
           },
         ]}
       >
-        <Text style={styles.coreText}>IRIS</Text>
+        <Text style={styles.coreText}>IRA</Text>
         <Text style={styles.subText}>AI NODE</Text>
       </Animated.View>
     </View>
