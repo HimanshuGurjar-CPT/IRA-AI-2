@@ -1,8 +1,8 @@
-# 📜 Code of Conduct — IRIS-MX Community
+# 📜 Code of Conduct — IRA-AI Community
 
 ## Our Pledge
 
-We as creators, contributors, and maintainers of **IRIS-MX** pledge to make participation in our project and community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
+We as creators, contributors, and maintainers of **IRA-AI** pledge to make participation in our project and community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
 ---
 
