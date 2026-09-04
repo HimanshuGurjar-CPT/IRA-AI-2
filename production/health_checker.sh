@@ -2,7 +2,7 @@
 # IRIS-MX Production Microservices Health Monitor
 
 echo "========================================================="
-echo "⚡ IRIS-MX PRODUCTION CLUSTER HEALTH CHECKER"
+echo "⚡ IRA-AI PRODUCTION CLUSTER HEALTH CHECKER"
 echo "========================================================="
 
 check_service() {
