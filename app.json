@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "IRIS-MX",
-    "slug": "IRIS-MX",
+    "name": "IRA-AI",
+    "slug": "IRA-AI",
     "version": "1.0.1",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/iconira.png",
     "scheme": "iraai",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
