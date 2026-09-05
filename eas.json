@@ -9,6 +9,8 @@
       "distribution": "internal"
     },
     "preview": {
+      "node": "20.18.0",
+      "installCommand": "npm install --legacy-peer-deps",
       "distribution": "internal",
       "withoutCredentials": false,
       "env": {
