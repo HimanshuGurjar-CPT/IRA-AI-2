@@ -14,7 +14,6 @@
       "env": {
         "CI": "1"
         },
-        "gradleCommand": ":app:bundleRelease",
       "android": {
         "buildType": "apk"
       }
