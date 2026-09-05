@@ -4,11 +4,11 @@
   "version": "1.0.1",
   "scripts": {
     "start": "expo start",
+    "postinstall": "chmod -R +x node_modules/react-native/sdks/hermesc/",
     "android": "expo run:android",
     "ios": "node ./scripts/ios-runner.js",
     "web": "expo start --web",
     "pre": "npx expo prebuild --clean"
-    "postinstall": "chmod -R +x node_modules/react-native/sdks/hermesc/",
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",

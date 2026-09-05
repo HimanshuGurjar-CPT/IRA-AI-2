@@ -10,6 +10,11 @@
     },
     "preview": {
       "distribution": "internal",
+      "withoutCredentials": false,
+      "env": {
+        "CI": "1"
+        },
+        "gradleCommand": ":app:bundleRelease",
       "android": {
         "buildType": "apk"
       }
